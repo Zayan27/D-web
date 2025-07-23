@@ -8,6 +8,7 @@ $strong-text-gradient: linear-gradient(90deg, rgba(217, 35, 208, 1) 0%, rgba(242
   z-index: 1;
   padding: 2rem 1rem;
   overflow: hidden;
+  margin-bottom: 70px;
 
   .starImg {
     position: absolute;
@@ -41,7 +42,7 @@ $strong-text-gradient: linear-gradient(90deg, rgba(217, 35, 208, 1) 0%, rgba(242
   position: relative;
   font-size: 1.7rem;
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.4;
   z-index: 1;
 
   strong {
