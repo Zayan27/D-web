@@ -18,6 +18,7 @@ h1{
 }
 .whyusText{
     color: #FFFF;
+    font-size: 20px;
 
     strong
     {
@@ -28,4 +29,54 @@ h1{
         color: transparent;
         font-weight: 600;
     }
+}
+
+.proven-column{
+    background-color: #f5f2f2;
+    padding: 18px;
+    border-radius: 12px;
+    h2{
+        font-weight: 600;
+    }
+}
+.trust-column {
+    padding: 18px;
+  .trust-content {
+    height: 100%; // or min-height: 300px; depending on your layout need
+    display: flex;
+    flex-direction: column;
+    
+
+    h2 {
+      color: #fff;
+      font-weight: 600;
+    }
+
+    p {
+      color: #fff;
+      margin-bottom: 0; // optional
+    }
+  }
+}
+.scalable-column{
+    background-color: #f5f2f2;
+    padding: 18px;
+    border-radius: 12px;
+    color: #111;
+    h2{
+        font-weight: 600;
+    }
+}
+.support-column{
+    padding: 18px;
+    color: #fff;
+    h2{
+        font-weight: 600;
+    }
+}
+
+.gsap-column {
+  opacity: 1; // ensures animation is visible
+  transform: translateY(50px);
+  transition: opacity 0.3s, transform 0.3s;
 }
