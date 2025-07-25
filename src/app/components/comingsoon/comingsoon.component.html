@@ -1,0 +1,55 @@
+<div class="coming-soon-container">
+  <!-- Background elements -->
+  <div class="bg-blob bg-blob-1"></div>
+  <div class="bg-blob bg-blob-2"></div>
+  <div class="bg-blob bg-blob-3"></div>
+  
+  <div class="content-wrapper">
+    <!-- Logo -->
+    <div class="logo">
+      <img src="assets/logo_1.png" alt="" style="height: 60px; width: 40px;">
+        <div class="d-flex"> <span class="logoD">D'</span><span>WEB SOLUTIONS</span></div>
+    </div>
+    
+    <!-- Main content -->
+    <main class="main-content">
+      <h1 class="heading">We're Coming Soon</h1>
+      <p class="subheading">We're working hard to bring you an amazing experience. Stay tuned for our launch!</p>
+      
+      <!-- Countdown -->
+      <div class="countdown">
+        <div class="countdown-item">
+          <span class="countdown-number">{{days}}</span>
+          <span class="countdown-label">Days</span>
+        </div>
+        <div class="countdown-item">
+          <span class="countdown-number">{{hours}}</span>
+          <span class="countdown-label">Hours</span>
+        </div>
+        <div class="countdown-item">
+          <span class="countdown-number">{{minutes}}</span>
+          <span class="countdown-label">Minutes</span>
+        </div>
+        <div class="countdown-item">
+          <span class="countdown-number">{{seconds}}</span>
+          <span class="countdown-label">Seconds</span>
+        </div>
+      </div>
+      
+      <!-- Subscribe form -->
+      <form class="subscribe-form" (submit)="subscribe($event)">
+        <input type="email" name="email" placeholder="Enter your email for updates" required>
+        <button type="submit">Notify Me</button>
+      </form>
+      <div class="success-message">Thank you! We'll notify you when we launch.</div>
+      
+      <!-- Social links -->
+      <div class="social-icons">
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </main>
+  </div>
+</div>
