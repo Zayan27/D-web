@@ -1,0 +1,119 @@
+.mainContainer {
+  color: #fff;
+  padding: 2rem 1rem;
+
+  .services-header {
+    margin-top: 3rem;
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+
+      @media (max-width: 768px) {
+        font-size: 1.8rem;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 1.5rem;
+      }
+    }
+
+    .service-container {
+      width: 50%;
+      margin: 0 auto;
+
+      @media (max-width: 992px) {
+        width: 70%;
+      }
+
+      @media (max-width: 576px) {
+        width: 100%;
+      }
+
+      p {
+        color: #c1c1c1;
+        font-size: 1rem;
+
+        @media (max-width: 576px) {
+          font-size: 0.95rem;
+        }
+      }
+    }
+  }
+
+  .services-list {
+    list-style: none;
+    font-size: 1.25rem;
+    color: #d4c6c6;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0;
+
+    li {
+        font-size: 28px;
+        @media (max-width: 992px) {
+        font-size: 20px;
+      }
+
+      @media (max-width: 576px) {
+        font-size: 14px;
+      }
+      span {
+        font-size: 1rem;
+        color: #c1c1c1;
+        margin-right: 1.5rem;
+
+        @media (max-width: 576px) {
+          margin-right: 0.8rem;
+        }
+      }
+
+      .arrow {
+        transition: transform 0.3s ease;
+        font-size: 1.25rem;
+        color: #c1c1c1;
+
+        &.rotated {
+          transform: rotate(90deg);
+        }
+      }
+
+      .toggle-header {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+
+        @media (max-width: 576px) {
+          flex-direction: row;
+          align-items: flex-start;
+        }
+      }
+
+      .serviceList-text {
+        overflow: hidden;
+
+        p {
+          font-size: 1rem;
+          font-weight: 300;
+          color: #c1c1c1;
+
+          @media (max-width: 576px) {
+            font-size: 0.95rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.techDiv-pills {
+  list-style: none;
+
+  li {
+    padding: 4px 11px;
+    font-size: 12px;
+    border: 1px solid white;
+    border-radius: 30px;
+    width: auto;
+    transition: transform 0.3s ease;
+  }
+}

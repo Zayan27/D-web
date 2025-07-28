@@ -1,0 +1,39 @@
+<div class="container-fluid mainContainer" #servicesSection>
+  <div class="row justify-content-center text-center services-header">
+    <div class="col-12 col-md-10">
+      <h1 class="mt-4">SERVICES WE PROVIDE FOR OUR CLIENTS</h1>
+      <div class="service-container mt-1 p-2">
+        <p class="whyusText mt-3">
+          Our services are meticulously crafted to meet the unique needs of your business, seamlessly integrating innovation and expertise.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center mt-4">
+    <div class="col-12 col-md-10 col-lg-9">
+      <ul class="services-list">
+        <li *ngFor="let item of items; let i = index" [class.active]="activeIndex === i">
+          <div class="d-flex align-items-center justify-content-between p-3 toggle-header" (click)="toggleItem(i)">
+            <div>
+              <span class="numbers">{{ item.number }}</span>{{ item.title }}
+            </div>
+            <i class="pi pi-arrow-right arrow" [class.rotated]="activeIndex === i"></i>
+          </div>
+          <div class="container serviceList-text" #serviceText>
+            <p>{{ item.description }}</p>
+
+            <ul class="techDiv-pills mt-2 d-flex gap-2 align-items-center" >
+                <li *ngFor="let pills of item.techs"><p class="m-0">{{pills}}</p></li>
+            </ul>
+
+            <div  >
+                
+            </div>
+          </div>
+          <hr>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
