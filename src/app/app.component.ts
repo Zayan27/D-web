@@ -6,11 +6,11 @@ import { WhyUsComponent } from './components/why-us/why-us.component';
 import 'primeicons/primeicons.css'; 
 import { ComingsoonComponent } from './components/comingsoon/comingsoon.component';
 import { OurServicesComponent } from './components/our-services/our-services.component';
-
+import { ContactFormComponent } from './components/contact-form/contact-form.component'; // ✅ fix here
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HomeCompComponent, WhoWeAreComponent, WhyUsComponent, ComingsoonComponent, OurServicesComponent],
+  imports: [RouterOutlet, HomeCompComponent, WhoWeAreComponent, WhyUsComponent, ComingsoonComponent, OurServicesComponent,ContactFormComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'] // ✅ fix here
 })
