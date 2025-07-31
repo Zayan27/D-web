@@ -44,7 +44,7 @@ $background-color: #520763;
   display: flex;
   align-items: center;
   gap: 2px;
-  padding: 12px;
+  padding: 2px 16px 2px 16px;
   cursor: pointer;
   transition: background-color 0.5s ease-in-out, transform 0.5s ease-in-out;
 
@@ -105,7 +105,7 @@ $background-color: #520763;
 .mainHeading {
   
   font-family: "Special Gothic Expanded One", sans-serif;
-  font-size: 5rem;
+  font-size: 3.5rem;
   font-weight: 600;
 
   .gradientText {
