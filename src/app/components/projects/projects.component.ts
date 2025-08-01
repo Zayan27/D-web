@@ -22,7 +22,7 @@ export class ProjectsComponent implements AfterViewInit {
 
     this.createPixelGrid();
     this.startAnimation();
-
+    const sections = gsap.utils.toArray<HTMLElement>('.horizontal-container .page');
     // Animate pixel-grid-container scale + opacity on scroll
     gsap.fromTo(
       '.pixel-grid-container',
@@ -58,6 +58,19 @@ export class ProjectsComponent implements AfterViewInit {
         },
       }
     );
+
+    gsap.to(sections, {
+      xPercent: -100 * (sections.length - 1),
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '.horizontal-wrapper',
+        pin: true,
+        scrub: 1,
+        start: 'top top',
+        end: () => '+=' + (document.querySelector('.horizontal-container')!.scrollWidth),
+        markers: false, // set to true for debug
+      },
+    });
   }
 
   private createPixelGrid(): void {
