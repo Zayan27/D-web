@@ -7,11 +7,15 @@ import 'primeicons/primeicons.css';
 import { ComingsoonComponent } from './components/comingsoon/comingsoon.component';
 import { OurServicesComponent } from './components/our-services/our-services.component';
 import { ProjectsComponent } from './components/projects/projects.component';
+import { TestimonialCompComponent } from './components/testimonial-comp/testimonial-comp.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HomeCompComponent, WhoWeAreComponent, WhyUsComponent, ComingsoonComponent, OurServicesComponent, ProjectsComponent],
+  imports: [RouterOutlet, HomeCompComponent, 
+    WhoWeAreComponent, WhyUsComponent,
+    ComingsoonComponent, OurServicesComponent,
+    ProjectsComponent, TestimonialCompComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'] // ✅ fix here
 })
