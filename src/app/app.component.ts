@@ -8,6 +8,7 @@ import { ComingsoonComponent } from './components/comingsoon/comingsoon.componen
 import { OurServicesComponent } from './components/our-services/our-services.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { TestimonialCompComponent } from './components/testimonial-comp/testimonial-comp.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,8 @@ import { TestimonialCompComponent } from './components/testimonial-comp/testimon
   imports: [RouterOutlet, HomeCompComponent, 
     WhoWeAreComponent, WhyUsComponent,
     ComingsoonComponent, OurServicesComponent,
-    ProjectsComponent, TestimonialCompComponent],
+    ProjectsComponent, TestimonialCompComponent,
+  FooterComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'] // ✅ fix here
 })

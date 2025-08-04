@@ -31,7 +31,7 @@ export class TestimonialCompComponent implements AfterViewInit {
 
     // Create GSAP loop animation
     const tween = gsap.to(track, {
-      xPercent: direction * -80, // move half width
+      xPercent: direction * -80,
       ease: 'none',
       duration: 90,
       repeat: -1,
@@ -48,15 +48,22 @@ export class TestimonialCompComponent implements AfterViewInit {
     track.addEventListener('touchstart', () => tween.pause());
     track.addEventListener('touchend', () => tween.play());
 
-    // Scroll-triggered speed boost
+    // Scroll-triggered speed boost with clamped and smoothed timeScale
     ScrollTrigger.create({
       trigger: track,
       start: 'top bottom',
       end: 'bottom top',
       onUpdate: (self) => {
         const velocity = self.getVelocity();
-        const speedBoost = 1 + Math.abs(velocity) / 3000;
-        tween.timeScale(speedBoost);
+        const rawBoost = 1 + Math.abs(velocity) / 3000;
+        const speedBoost = gsap.utils.clamp(1, 2, rawBoost); // Clamp between 1x and 2x speed
+
+        // Smoothly transition to new timeScale
+        gsap.to(tween, {
+          timeScale: speedBoost,
+          duration: 0.2,
+          ease: 'power1.out',
+        });
       },
     });
   }
