@@ -1,0 +1,102 @@
+.menu-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100vh;
+  background: #111;
+  color: white;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+
+  &.active {
+    pointer-events: auto;
+  }
+
+  .menuHeader{
+    margin-top: 8rem;
+    padding-left: 20px;
+    h1{
+        font-size: 5rem;
+        font-weight: 600;
+    }
+    p{
+        color: #c1c1c1;
+    }
+    .locationText{
+        padding-right: 20px;
+    }
+  }
+  .line{
+    background: #c1c1c1;
+    
+    height: 1px;
+  }
+  
+ .menu-content ul {
+  list-style: none;
+  padding: 20px;
+  margin-top: 1rem;
+  text-align: left;
+
+  li {
+    font-size: 1.3rem;
+    font-weight: 500;
+    cursor: pointer;
+    border-bottom: 1px solid;
+    padding: 8px 4px;
+    transition: all 0.3s ease;
+    transform-origin: left center; /* Add this for better scaling behavior */
+
+    p {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      i {
+        font-size: 0.6rem;
+        font-weight: 400;
+        transition: transform 0.3s ease;
+        display: inline-block; /* Needed for transform to work properly */
+      }
+    }
+
+    &:hover {
+      transform: scale(1.03) !important; /* This now works independently */
+      color: #c1c1c1;
+      
+      i {
+        transform: translateX(2px); /* Arrow transform works separately */
+      }
+    }
+  }
+}
+
+
+  .menu-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 3rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+.menu-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 999;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}

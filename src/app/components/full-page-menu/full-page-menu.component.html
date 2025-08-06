@@ -1,0 +1,33 @@
+<div class="menu-overlay" [class.active]="menuOpen">
+    <div class="menuHeader">
+        <h1 class="menuHeaderText" #menuHeaderText>MENU</h1>
+        <div class="d-flex align-items-center justify-content-between">
+            <p>FROM IDEA TO IMPACT - LET'S BUILD IT TOGETHER.</p>
+            <p class="locationText">BASED IN (KHI), PK.</p>
+        </div>
+        <!-- <p>From idea to impact — let’s build it together.</p> -->
+    </div>
+    <div class="row line"></div>
+    <div class="row">
+        <div class="col-12 col-md-6">
+
+        </div>
+        <div class="col-12 col-md-6">
+             <div class="menu-content">
+                <ul>
+                <li (click)="navigateTo('home')"><p><i class="pi pi-arrow-right"></i> HOME</p></li>
+                <li (click)="navigateTo('who-we-are')"><p><i class="pi pi-arrow-right"></i> WHO WE ARE</p></li>
+                <li (click)="navigateTo('why-us')"><p><i class="pi pi-arrow-right"></i> WHY US?</p></li>
+                <li (click)="navigateTo('our-services')"><p><i class="pi pi-arrow-right"></i> OUR SERVICES</p></li>
+                <li (click)="navigateTo('projects')"><p><i class="pi pi-arrow-right"></i> PROJECTS</p></li>
+                <li (click)="navigateTo('testimonial')"><p><i class="pi pi-arrow-right"></i> TESTIMONIALS</p></li>
+                <li (click)="navigateTo('footer')"><p><i class="pi pi-arrow-right"></i> CONTACT</p></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+  <button class="menu-close" (click)="toggleMenu()">×</button>
+</div>
+
+<button class="menu-toggle" (click)="toggleMenu()">☰</button>
+
