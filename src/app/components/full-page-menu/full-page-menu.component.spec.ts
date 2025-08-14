@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import  { ContactComponent } from './contact-form.component';
+import { FullPageMenuComponent } from './full-page-menu.component';
 
-describe('ContactComponent', () => {
-  let component: ContactComponent;
-  let fixture: ComponentFixture<ContactComponent>;
+describe('FullPageMenuComponent', () => {
+  let component: FullPageMenuComponent;
+  let fixture: ComponentFixture<FullPageMenuComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ContactComponent]
+      imports: [FullPageMenuComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ContactComponent);
+    fixture = TestBed.createComponent(FullPageMenuComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

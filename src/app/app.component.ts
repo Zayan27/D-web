@@ -6,11 +6,21 @@ import { WhyUsComponent } from './components/why-us/why-us.component';
 import 'primeicons/primeicons.css'; 
 import { ComingsoonComponent } from './components/comingsoon/comingsoon.component';
 import { OurServicesComponent } from './components/our-services/our-services.component';
-import { ContactFormComponent } from './components/contact-form/contact-form.component'; // ✅ fix here
+import { ProjectsComponent } from './components/projects/projects.component';
+import { TestimonialCompComponent } from './components/testimonial-comp/testimonial-comp.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { FullPageMenuComponent } from './components/full-page-menu/full-page-menu.component';
+import { ContactComponent } from './components/contact-form/contact-form.component'; // ✅ fix here
+import { OurTeamComponent } from './components/our-team/our-team.component';
+
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HomeCompComponent, WhoWeAreComponent, WhyUsComponent, ComingsoonComponent, OurServicesComponent,ContactFormComponent],
+  imports: [RouterOutlet, HomeCompComponent, 
+    WhoWeAreComponent, WhyUsComponent,
+    ComingsoonComponent, OurServicesComponent,
+    ProjectsComponent,OurTeamComponent, TestimonialCompComponent,ContactComponent,
+  FooterComponent,FullPageMenuComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'] // ✅ fix here
 })

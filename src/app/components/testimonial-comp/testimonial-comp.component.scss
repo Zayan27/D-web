@@ -1,0 +1,133 @@
+
+
+*{
+    margin: 0;
+}
+
+.testimonial-container{
+    color: #Fff;
+    .sectionHeading{
+        font-size: 42px;
+        font-weight: 600;
+    }
+    .sectionText{
+        color: #c1c1c1;
+        font-size: 20px;
+    }
+}
+
+.testi-text{
+    border-radius: 20px;
+    padding: 4px 16px 5px 16px;
+    background: rgb(202, 248, 189);
+    font-size: 22px;
+    color: #111;
+    font-weight: 800;
+    text-align: center;
+    box-shadow: 2px 2px 2px rgb(160, 208, 147);
+}
+.fancy {
+  position: relative;
+  white-space: nowrap;
+}
+
+.fancy:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: calc(0.3125em * -0.625);
+  height: 0.3125em;
+  background-image: url("data:image/svg+xml,<svg width='100' height='64' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M-17 30.5C-1 22 72-4 54 13 37.9 28.2-2.5 57.5 16 55.5s72-29 104-40' stroke='%236a0dad' stroke-width='16'/></svg>");
+  background-size: auto 100%;
+}
+
+
+
+.testimonial-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.marquee-row {
+  width: 100%;
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 20px;
+  will-change: transform;
+}
+
+
+
+.reviewCards {
+  min-width: 450px;
+  max-width: 400px;
+  background: #111;
+  color: #fff;
+  padding: 20px;
+  border-radius: 18px;
+  flex-shrink: 0;
+   transition: transform 0.3s ease; 
+}
+
+
+
+.reviewCards:hover {
+    transform: translateY(-5px); /* Optional: adds hover effect */
+}
+
+.clientProfile {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    overflow: hidden; /* Ensures image stays within bounds */
+}
+
+.clientProfile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.namePart .line {
+    height: auto;
+    width: 2px; /* Slightly more visible */
+    background: #c1c1c1;
+}
+
+.ClientName h5 {
+    background: linear-gradient(90deg, rgb(219, 194, 239) 0%, rgba(133, 67, 159) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.positon {
+    color: #c1c1c1;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .testimonial-wrapper {
+    max-height: calc(2 * 350px); // ~2 cards visible
+    overflow: hidden;
+  }
+
+  .reviewCards {
+    min-width: 85vw;
+  }
+}
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+ 
+
+
+

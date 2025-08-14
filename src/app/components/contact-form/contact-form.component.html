@@ -1,19 +1,89 @@
-<div class="form-wrapper">
-  <h2 class="form-title">Get in Touch</h2>
-  <form 
-    action="https://formsubmit.co/dwebsolution0@gmail.com" 
-    method="POST"
-    class="contact-form"
-  >
-    <input type="text" name="name" placeholder="Your Name" required />
-    <input type="email" name="email" placeholder="Your Email" required />
-    <input type="tel" name="phone" placeholder="Your Phone" required />
-    <textarea name="message" placeholder="Your Message" rows="4" minlength="10" required></textarea>
+<div class="main">
+<div class="contact-container">
+  <div class="contact-content">
 
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_template" value="box">
-    <!-- <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you"> -->
+    <div class="left-section">
+      <h2>Tell us about your project</h2>
 
-    <button type="submit">Send Message</button>
-  </form>
+      <ul class="benefits">
+        <li>We will respond to you within 12 hours</li>
+        <li>We'll sign an NDA if requested</li>
+        <li>Access to dedicated consultant specialists</li>
+      </ul>
+
+      <div class="bottom-section">
+        <div class="contact-info">
+          <a href="mailto:contact&#64;dwebsolutions.org">contact&#64;dwebsolutions.org</a>
+        </div>
+
+        <div class="book-call-text">
+          Always busy and want to book<br>
+          an exact time to call?
+        </div>
+
+        <button class="book-call-btn">Book a free call</button>
+      </div>
+    </div>
+
+    <div class="form-section">
+      <div class="service-selection">
+        <h3>Service</h3>
+        <div class="service-tags">
+          <span class="service-tag" 
+                [class.active]="selectedService==='Consulting'"
+                (click)="selectService('Consulting')">Consulting</span>
+          <span class="service-tag" 
+                [class.active]="selectedService==='Development'"
+                (click)="selectService('Development')">Development</span>
+          <span class="service-tag" 
+                [class.active]="selectedService==='Design'"
+                (click)="selectService('Design')">Design</span>
+          <span class="service-tag" 
+                [class.active]="selectedService==='Marketing'"
+                (click)="selectService('Marketing')">Marketing</span>
+        </div>
+      </div>
+
+      <div class="budget-selection">
+        <h3>Budget</h3>
+        <div class="budget-tags">
+          <span class="budget-tag" 
+                [class.active]="selectedBudget==='Less than $10K'"
+                (click)="selectBudget('Less than $10K')">Less than $10K</span>
+          <span class="budget-tag" 
+                [class.active]="selectedBudget==='$10K - $50K'"
+                (click)="selectBudget('$10K - $50K')">$10K - $50K</span>
+          <span class="budget-tag" 
+                [class.active]="selectedBudget==='More than $50K'"
+                (click)="selectBudget('More than $50K')">More than $50K</span>
+        </div>
+      </div>
+
+      <form (ngSubmit)="sendEmail()">
+        <div class="form-row">
+          <div class="form-group">
+            <input type="text" placeholder="Full name*" [(ngModel)]="fullname" name="fullname" required>
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="Email*" [(ngModel)]="email" name="email" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <textarea placeholder="Project details*" [(ngModel)]="project" name="project" required></textarea>
+        </div>
+
+        <div class="file-upload">
+          <input type="file" id="file" style="display: none;" multiple>
+          <label for="file" style="cursor: pointer;">
+            Attach a file(optional)<br>
+            <small>Choose a file or drag and drop here</small>
+          </label>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit Inquiry</button>
+      </form>
+    </div>
+  </div>
+</div>
 </div>
