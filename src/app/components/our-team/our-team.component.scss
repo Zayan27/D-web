@@ -1,0 +1,121 @@
+   .team-container {
+      padding: 2rem;
+      max-width: 1400px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .company-logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .logo-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo-text {
+      font-size: 1.8rem;
+      font-weight: 800;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #ffffff;
+      line-height: 0.5;
+    }
+
+    .solutions {
+      font-size: 0.8rem;
+      font-weight: 400;
+      letter-spacing: 2px;
+    }
+
+    .meet-team-title {
+      font-size: 2.5rem;
+      font-style: italic;
+      color: #ffffff;
+      margin-bottom: 3rem;
+    }
+
+    .team-grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .team-member {
+      width: 320px;
+    }
+
+.image-container {
+  background: linear-gradient(135deg, #6C40F8 0%, #B450F7 100%);
+  border-radius: 20px 20px 0px 0px;
+  padding: 1rem;
+  height: 420px;
+  width: 280px;
+  box-shadow: 0 20px 40px rgba(139, 92, 246, 0.3);
+  position: relative;
+  overflow: visible; 
+}
+
+.profile-image {
+  position: absolute;
+  bottom: 0;      
+  right: -20px;    
+  top: -60px;      
+  transform: translateX(0);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.profile-image img {
+  width: 120%;        
+  height: 105%; 
+  object-fit: contain;
+  object-position: bottom;
+}
+
+    .member-name {
+      margin-top: 1rem;
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #6C06CB;
+      text-transform: uppercase;
+      line-height: 1.1;
+    }
+
+    .member-title {
+      font-size: 1.1rem;
+      color: #ffffff;
+    }
+
+
+    @media (max-width: 768px) {
+      .team-grid {
+        flex-direction: column;
+        align-items: center;
+        padding-top:1rem;
+      }
+      .team-member{
+        padding-top:2rem;
+        margin-left: 20px;
+      }
+      .member-name{
+         padding-right: 44px;
+      }
+      .member-title {
+        padding-right: 44px;
+      }
+    
+    }
+ 
