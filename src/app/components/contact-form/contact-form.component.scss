@@ -1,6 +1,7 @@
 
         .main {
-            font-family: -apple-system, BlinkMacSystemFont, 'Bebas Neue', Roboto, sans-serif;
+            font-family: "Bebas Neue", sans-serif;
+            font-weight: 400;
             background: transparent;
             min-height: 100vh;
             display: flex;
@@ -17,7 +18,10 @@
             left: 0;
             width: 400px;
             height: 400px;
-            background: linear-gradient(135deg, #6C40F8 0%, #B450F7 100%);
+            background: linear-gradient(
+            90deg,
+            rgb(56, 40, 56) 0%,
+            rgb(181, 100, 204) 100%);
             border-radius: 50%;
             filter: blur(100px);
             opacity: 0.6;
@@ -51,35 +55,44 @@
 
 
         .left-section h2 {
-            font-size: 48px;
-            font-weight: 700;
+            font-size: 42px;
+            font-weight: 600;
             color: white;
             line-height: 1.1;
             margin-bottom: 32px;
+            text-transform: uppercase;
         }
 
         .benefits {
             list-style: none;
             margin-bottom: 32px;
+            padding: 0;
         }
 
         .benefits li {
             color: rgba(255, 255, 255, 0.9);
             margin-bottom: 12px;
             position: relative;
-            padding-left: 28px;
-            font-size: 16px;
+            
+            font-size: 18px;
+            display: flex;
+            gap: 9px;
+            align-items: center;
+        }
+        .benefits li i{
+            padding: 0;
+            color: #4ADE80;
         }
 
-        .benefits li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            top: 0;
-            color: #4ADE80;
-            font-weight: bold;
-            font-size: 16px;
-        }
+        // .benefits li::before {
+        //     content: '✓';
+        //     position: absolute;
+        //     left: 0;
+        //     top: 0;
+        //     color: #4ADE80;
+        //     font-weight: bold;
+        //     font-size: 16px;
+        // }
         .bottom-section {
             margin-top: auto; 
             display: flex;

@@ -11,7 +11,7 @@ import { TestimonialCompComponent } from './components/testimonial-comp/testimon
 import { FooterComponent } from './components/footer/footer.component';
 import { FullPageMenuComponent } from './components/full-page-menu/full-page-menu.component';
 import { ContactComponent } from './components/contact-form/contact-form.component'; // ✅ fix here
-import { OurTeamComponent } from './components/our-team/our-team.component';
+
 
 @Component({
   selector: 'app-root',
@@ -19,7 +19,7 @@ import { OurTeamComponent } from './components/our-team/our-team.component';
   imports: [RouterOutlet, HomeCompComponent, 
     WhoWeAreComponent, WhyUsComponent,
     ComingsoonComponent, OurServicesComponent,
-    ProjectsComponent,OurTeamComponent, TestimonialCompComponent,ContactComponent,
+    ProjectsComponent, TestimonialCompComponent,ContactComponent,
   FooterComponent,FullPageMenuComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'] // ✅ fix here
