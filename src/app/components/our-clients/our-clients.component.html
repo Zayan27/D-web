@@ -1,0 +1,22 @@
+<div class="container-fluid ourclients-wrapper mt-5">
+    <div class="row justify-content-center text-center clients-container">
+        <div class="col-12 col-md-10">
+        <h1 class="mt-4 sectionHeading">Our Clients: Empowering Success Through Trusted Partnerships</h1>
+
+        <p class="sectionText">
+        We take pride in collaborating with forward-thinking brands and organizations. Our commitment to delivering exceptional solutions has earned the trust of industry leaders across various sectors. Together, we build lasting relationships, drive innovation, and create meaningful impact for our clients and their customers.
+            
+        </p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row mt-3 d-flex justify-content-center">
+            <div 
+            class="col-6 col-md-2 logos d-flex justify-content-center p-4" 
+            *ngFor="let logos of clientsLogos">
+            <img [src]="logos.logo" alt="client-logos" class="clientLogoImg">
+            </div>
+        </div>
+    </div>
+
+</div>
