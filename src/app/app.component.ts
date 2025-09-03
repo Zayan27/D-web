@@ -10,6 +10,7 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { TestimonialCompComponent } from './components/testimonial-comp/testimonial-comp.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { FullPageMenuComponent } from './components/full-page-menu/full-page-menu.component';
+import { OurClientsComponent } from './components/our-clients/our-clients.component';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +19,9 @@ import { FullPageMenuComponent } from './components/full-page-menu/full-page-men
     WhoWeAreComponent, WhyUsComponent,
     ComingsoonComponent, OurServicesComponent,
     ProjectsComponent, TestimonialCompComponent,
-  FooterComponent,FullPageMenuComponent],
+  FooterComponent,FullPageMenuComponent,
+    OurClientsComponent
+],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'] // ✅ fix here
 })
