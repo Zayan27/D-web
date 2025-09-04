@@ -57,12 +57,12 @@
     }
 
 .image-container {
-  background: linear-gradient(135deg, #6C40F8 0%, #B450F7 100%);
+  background: linear-gradient(45deg, rgb(214 158 217) 0%, rgb(83, 48, 120) 100%);
   border-radius: 20px 20px 0px 0px;
   padding: 1rem;
   height: 420px;
   width: 280px;
-  box-shadow: 0 20px 40px rgba(139, 92, 246, 0.3);
+  box-shadow: 0 20px 40px rgb(90 68 91 / 30%);
   position: relative;
   overflow: visible; 
 }
@@ -85,12 +85,21 @@
   object-fit: contain;
   object-position: bottom;
 }
-
+.short_img{
+  width: 120%;
+  height: 100% !important;
+  object-fit: contain;
+  object-position: bottom;
+}
     .member-name {
       margin-top: 1rem;
       font-size: 1.8rem;
       font-weight: bold;
-      color: #6C06CB;
+      background: linear-gradient(90deg, rgb(56, 40, 56) 0%, rgba(181, 100, 204, 1) 100%);
+      -webkit-background-clip: text; /* For WebKit browsers */
+      background-clip: text;         /* Standard property */
+      -webkit-text-fill-color: transparent;
+      color: transparent;            /* Fallback for non-WebKit */
       text-transform: uppercase;
       line-height: 1.1;
     }
