@@ -109,11 +109,28 @@
   list-style: none;
 
   li {
+    cursor: default;
     padding: 4px 11px;
     font-size: 12px;
     border: 1px solid white;
     border-radius: 30px;
     width: auto;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
+
+    p {
+      margin: 0;
+      color: #fff;
+      transition: all 0.3s ease;
+    }
+
+    &:hover {
+      background: #fff;   // pill background changes
+      transform: scale(1.05); // optional hover scale effect
+      
+      p {
+        color: #111 !important; // text changes
+      }
+    }
   }
 }
+

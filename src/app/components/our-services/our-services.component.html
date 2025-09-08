@@ -14,26 +14,27 @@
     <div class="col-12 col-md-10 col-lg-9">
       <ul class="services-list">
         <li *ngFor="let item of items; let i = index" [class.active]="activeIndex === i">
-          <div class="d-flex align-items-center justify-content-between p-3 toggle-header" (click)="toggleItem(i)">
-            <div>
-              <span class="numbers">{{ item.number }}</span>{{ item.title }}
+          <div class="service-item-wrapper">
+            <div class="d-flex align-items-center justify-content-between p-3 toggle-header" (click)="toggleItem(i)">
+              <div>
+                <span class="numbers">{{ item.number }}</span>{{ item.title }}
+              </div>
+              <i class="pi pi-arrow-right arrow" [class.rotated]="activeIndex === i"></i>
             </div>
-            <i class="pi pi-arrow-right arrow" [class.rotated]="activeIndex === i"></i>
           </div>
+
+          <!-- expandable content -->
           <div class="container serviceList-text" #serviceText>
             <p>{{ item.description }}</p>
 
-            <ul class="techDiv-pills mt-2 d-flex gap-2 align-items-center" >
-                <li *ngFor="let pills of item.techs"><p class="m-0">{{pills}}</p></li>
+            <ul class="row techDiv-pills mt-2 d-flex gap-2 align-items-center">
+              <li *ngFor="let pills of item.techs"><p class="m-0">{{ pills }}</p></li>
             </ul>
-
-            <div  >
-                
-            </div>
           </div>
           <hr>
         </li>
       </ul>
+
     </div>
   </div>
 </div>
