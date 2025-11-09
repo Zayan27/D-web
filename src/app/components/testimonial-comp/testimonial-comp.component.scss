@@ -50,31 +50,34 @@
 }
 
 .marquee-row {
-  width: 100%;
-  overflow: hidden;
-  margin: 20px 0;
+  display: flex;
+  align-items: stretch;
 }
 
 .marquee-track {
   display: flex;
-  width: max-content;
+  align-items: stretch; /* ensures equal height across cards */
   gap: 20px;
-  will-change: transform;
+  width: max-content;
 }
 
 
 
 .reviewCards {
-  min-width: 450px;
+  flex: 1;
+  min-width: 400px;
   max-width: 400px;
+  display: flex;
+  flex-direction: column; /* make it vertical layout */
+  justify-content: space-between; /* ensures content fits evenly */
   background: #111;
   color: #fff;
   padding: 20px;
   border-radius: 18px;
   flex-shrink: 0;
-   transition: transform 0.3s ease; 
+  transition: transform 0.3s ease;
+  height: 100%; /* allow equal height when parent enforces it */
 }
-
 
 
 .reviewCards:hover {
@@ -122,6 +125,7 @@
 
   .reviewCards {
     min-width: 85vw;
+    max-width: 85vw;
   }
 }
 
