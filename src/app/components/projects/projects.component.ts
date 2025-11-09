@@ -117,4 +117,11 @@ export class ProjectsComponent implements AfterViewInit {
     this.time += 0.03;
     requestAnimationFrame(() => this.startAnimation());
   }
+
+   navigateTo(id: string): void {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
 }
