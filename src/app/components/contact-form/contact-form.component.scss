@@ -52,6 +52,33 @@
 }
 
 
+.selected-file {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+  background: #c1c1c1;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 14px;
+  justify-content: space-between;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.remove-file-btn {
+  background: none;
+  border: none;
+  color: #d33;
+  font-size: 16px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.remove-file-btn:hover {
+  color: #b00;
+}
+
 
 
         .left-section h2 {
@@ -309,3 +336,112 @@
             }
         }
    
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(89, 72, 94, 0.7);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  animation: fadeIn 0.25s ease-in-out;
+}
+
+.modal-box {
+  background: linear-gradient(145deg, rgba(45, 20, 55, 0.8), rgba(85, 30, 95, 0.6));
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  max-width: 420px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: popIn 0.3s ease-in-out;
+  color: #fff;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.modal-box::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(181, 100, 204, 0.2), rgba(255, 255, 255, 0.05));
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.modal-box.success {
+  box-shadow: 0 0 25px rgba(180, 100, 255, 0.4);
+  border-left: 4px solid #b564cc;
+}
+
+.modal-box.error {
+  box-shadow: 0 0 25px rgba(255, 80, 130, 0.4);
+  border-left: 4px solid #ff4c9a;
+}
+
+.modal-icon {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: inherit;
+}
+.modal-icon {
+  font-size: 3rem;
+  margin-bottom: 0.6rem;
+}
+
+.modal-box.success .modal-icon {
+  color: #c991ff; /* Light purple for success */
+}
+
+.modal-box.error .modal-icon {
+  color: #ff85c0; /* Pinkish red for error */
+}
+
+
+.modal-box h3 {
+  margin-bottom: 0.6rem;
+  font-weight: 600;
+  font-size: 1.4rem;
+  letter-spacing: 0.4px;
+  color: #f3e9ff;
+}
+
+.modal-box p {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+/* Button */
+.modal-box button {
+  background: linear-gradient(90deg, rgb(56, 40, 56) 0%, rgba(181, 100, 204, 1) 100%);
+  color: white;
+  padding: 0.6rem 1.8rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(181, 100, 204, 0.3);
+}
+
+.modal-box button:hover {
+  transform: scale(1.07);
+  background: linear-gradient(90deg, rgba(181, 100, 204, 1) 0%, rgb(56, 40, 56) 100%);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.9) translateY(10px); opacity: 0; }
+  100% { transform: scale(1) translateY(0); opacity: 1; }
+}

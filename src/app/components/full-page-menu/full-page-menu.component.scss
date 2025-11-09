@@ -11,8 +11,10 @@
   transform: translateY(-100%);
   opacity: 0;
   pointer-events: none;
+  transition: all 0.6s ease;
 
   &.active {
+    transform: translateY(0);
     pointer-events: auto;
   }
 
@@ -111,4 +113,99 @@
   border: none;
   color: #fff;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-overlay {
+    overflow-y: auto;
+    padding-bottom: 3rem;
+  }
+
+  .menuHeader {
+    margin-top: 4rem;
+    padding: 0 1rem;
+    text-align: center;
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: #d0d0d0;
+      text-align: center;
+      margin-bottom: 0.3rem;
+    }
+
+    .d-flex {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+
+  .line {
+    margin: 1rem 0;
+  }
+
+  .menu-content {
+    text-align: center;
+  }
+
+  .menu-content ul {
+    padding: 0;
+    margin-top: 1rem;
+
+    li {
+      font-size: 1.1rem;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    li p {
+      justify-content: center;
+    }
+
+    li i {
+      font-size: 0.8rem;
+    }
+  }
+
+  .background-video {
+    margin: 1rem auto;
+    width: 95%;
+    height: 200px;
+    border-radius: 16px;
+    object-fit: cover;
+  }
+
+  .menu-close {
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+  }
+
+  .menu-toggle {
+    top: 0.7rem;
+    right: 0.7rem;
+    font-size: 1.8rem;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+  .menuHeader h1 {
+    font-size: 2rem;
+  }
+
+  .menuHeader p {
+    font-size: 0.85rem;
+  }
+
+  .menu-content ul li {
+    font-size: 1rem;
+  }
+
+  .background-video {
+    height: 160px;
+  }
 }
