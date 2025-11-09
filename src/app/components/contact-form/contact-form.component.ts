@@ -41,7 +41,7 @@ export class ContactComponent {
 
     };
 
-    this.http.post('http://localhost:3000/send-email', payload)
+    this.http.post('https://contact-form-backend.netlify.app/.netlify/functions/sendmail', payload)
       .subscribe({
         next: (res: any) => alert(res.message),
         error: () => alert('Error sending email')
