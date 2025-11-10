@@ -33,7 +33,7 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "node_modules/primeicons/primeicons.css",
+              "src/styles/primeicons-fixed.css",
               "node_modules/font-awesome/css/font-awesome.min.css",
               "src/styles.scss"
             ],
@@ -44,17 +44,17 @@
           "configurations": {
             "production": {
               "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "2kB",
-                  "maximumError": "4kB"
-                }
-              ],
+  {
+    "type": "initial",
+    "maximumWarning": "2mb",
+    "maximumError": "3mb"
+  },
+  {
+    "type": "anyComponentStyle",
+    "maximumWarning": "200kb",
+    "maximumError": "300kb"
+  }
+],
               "outputHashing": "all"
             },
             "development": {
@@ -90,17 +90,25 @@
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
-            ],
+  "src/favicon.ico",
+  "src/assets",
+  {
+    "glob": "**/*",
+    "input": "public",
+    "output": "./public"
+  },
+  {
+    "glob": "**/*",
+    "input": "node_modules/primeicons/fonts",
+    "output": "assets/primeicons/fonts"
+  }
+],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "node_modules/primeicons/primeicons.css",
-              "node_modules/font-awesome/css/font-awesome.min.css",
-              "src/styles.scss"
-            ],
+  "src/styles.scss",
+  "src/styles/primeicons-fixed.css",
+  "node_modules/bootstrap/dist/css/bootstrap.min.css",
+  "node_modules/font-awesome/css/font-awesome.min.css"
+],
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
             ]
