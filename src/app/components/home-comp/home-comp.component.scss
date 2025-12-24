@@ -23,6 +23,7 @@ $background-color: #520763;
     border-bottom-left-radius: 45px;
   border-bottom-right-radius: 45px;
     filter: brightness(0.5);
+    will-change: transform;
   }
 }
 

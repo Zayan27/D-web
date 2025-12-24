@@ -14,10 +14,26 @@ export class FullPageMenuComponent implements AfterViewInit {
   @ViewChild('menuOverlay', { static: false }) menuOverlay!: ElementRef;
   @ViewChild('menuHeaderText') menuHeaderText!: ElementRef;
   @ViewChild('menu-content') menucontent!: ElementRef;
+  @ViewChild('bgVideo') bgVideo!: ElementRef<HTMLVideoElement>;
 
 
   ngAfterViewInit() {
-    
+    const video = this.bgVideo.nativeElement;
+
+    video.muted = true;
+    video.playsInline = true;
+
+    const playVideo = () => {
+      video.play().catch(() => {
+        console.log('Autoplay blocked, retrying...');
+      });
+    };
+
+    if (video.readyState >= 2) {
+      playVideo();
+    } else {
+      video.addEventListener('canplay', playVideo, { once: true });
+    }
   }
   toggleMenu(): void {
   this.menuOpen = !this.menuOpen;
