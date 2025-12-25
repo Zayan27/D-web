@@ -28,7 +28,8 @@ grid-row-gap: 0px;
   font-family: "Special Gothic Expanded One", sans-serif;
   font-size: 1.8rem;
   font-weight: 600;
-  
+  letter-spacing: 0.08em;
+  line-height: 1.1; 
   .gradientText {
   background: linear-gradient(90deg, rgb(56, 40, 56) 0%, rgba(181, 100, 204, 1) 100%);
   -webkit-background-clip: text;
@@ -110,7 +111,7 @@ li:hover{
   transform: translateY(-50%);
   background-color: transparent !important;
   color: #c1c1c1;
-  font-size: 14px;
+  font-size: 11px;
   pointer-events: none;
   transition: 
     top 0.3s ease,

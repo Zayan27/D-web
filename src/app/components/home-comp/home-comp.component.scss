@@ -53,6 +53,7 @@ $background-color: #520763;
     color: #111;
     text-decoration: none;
     transition: color 0.5s ease-in-out;
+    font-weight: 600;
   }
 
   .arrow-up {
@@ -89,11 +90,13 @@ $background-color: #520763;
 
   a {
     color: #fff;
+    font-weight: 600;
     text-decoration: none;
     transition: font-size 0.3s ease-in-out; // Smooth transition for font-size
   }
 
   &:hover {
+    transition: font-size 0.3s ease-in-out;
     transform: scale(1.05); // Slight scale effect on hover
     padding: 19px; // Increase padding on hover
 
@@ -108,7 +111,8 @@ $background-color: #520763;
   font-family: "Special Gothic Expanded One", sans-serif;
   font-size: 3.5rem;
   font-weight: 600;
-
+  letter-spacing: 0.05em;
+  line-height: 1.1; 
   .gradientText {
   background: linear-gradient(45deg, rgb(201 176 201) 0%, rgba(181, 100, 204, 1) 100%);
   -webkit-background-clip: text;

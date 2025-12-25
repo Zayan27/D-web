@@ -38,7 +38,7 @@
     }
 
     .meet-team-title {
-      font-family: "Bebas Neue", sans-serif;
+      
       font-weight: 600;
       font-size: 2.5rem;
       color: #ffffff;
@@ -92,8 +92,9 @@
   object-position: bottom;
 }
     .member-name {
+      font-family: "Archivo Narrow", sans-serif;
       margin-top: 1rem;
-      font-size: 1.8rem;
+      font-size: 1.3rem;
       font-weight: bold;
       background: linear-gradient(90deg, rgb(56, 40, 56) 0%, rgba(181, 100, 204, 1) 100%);
       -webkit-background-clip: text; /* For WebKit browsers */

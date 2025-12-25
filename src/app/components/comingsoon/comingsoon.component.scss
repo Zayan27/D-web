@@ -33,7 +33,7 @@ $gradient-3: linear-gradient(90deg, rgb(88, 62, 88) 0%, rgba(181, 100, 204, 1) 1
   width: 100%;
   min-height: 100vh;
   overflow: hidden;
-  font-family: 'Bebas Neue', sans-serif;
+  
   color: white;
   background: $black;
   @include flex-center;

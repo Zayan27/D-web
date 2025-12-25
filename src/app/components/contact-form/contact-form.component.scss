@@ -1,6 +1,6 @@
 
         .main {
-            font-family: "Bebas Neue", sans-serif;
+            
             font-weight: 400;
             background: transparent;
             min-height: 100vh;
@@ -127,6 +127,7 @@
         }
         .contact-info {
             margin-bottom: 0px;
+            text-transform: lowercase;
         }
 
         .contact-info a {

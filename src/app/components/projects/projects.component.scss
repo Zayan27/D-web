@@ -57,7 +57,7 @@
   justify-content: space-between;
     .canvasHeader{
         font-size: 38px;
-        font-weight: 600;
+        font-weight: 800;
     }
   
 
@@ -197,6 +197,11 @@
 
 // 👇 Responsive adjustments
 @media (max-width: 768px) {
+  .overlay-content{
+    p{
+      font-size: 0.9rem;
+    }
+  }
   .page {
     padding: 20px;
 
