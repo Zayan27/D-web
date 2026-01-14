@@ -13,18 +13,14 @@ import { FullPageMenuComponent } from './components/full-page-menu/full-page-men
 import { OurClientsComponent } from './components/our-clients/our-clients.component';
 import { ContactComponent } from './components/contact-form/contact-form.component'; // ✅ fix here
 import { OurTeamComponent } from './components/our-team/our-team.component';
+import { HomeLayoutComponent } from './layouts/home-layout/home-layout.component';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HomeCompComponent, 
-    WhoWeAreComponent, WhyUsComponent,
-    ComingsoonComponent, OurServicesComponent,
-    ProjectsComponent, TestimonialCompComponent,ContactComponent,
-  FooterComponent,FullPageMenuComponent,
-    OurClientsComponent
-, OurTeamComponent],
+  imports: [RouterOutlet,FullPageMenuComponent, HomeLayoutComponent
+    ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'] // ✅ fix here
 })
