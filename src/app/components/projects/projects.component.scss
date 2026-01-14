@@ -4,10 +4,17 @@
     .sectionHeading{
         font-size: 42px;
         font-weight: 600;
+
+        @media (max-width: 375px){
+          font-size: 1.5rem;
+        }
     }
     .sectionText{
         color: #c1c1c1;
         font-size: 20px;
+        @media (max-width: 375px){
+          font-size: 0.9rem;
+        }
     }
 }
 .project-text{
@@ -19,6 +26,10 @@
     font-weight: 800;
     text-align: center;
     box-shadow: 2px 2px 2px rgb(245, 115, 139);
+    @media (max-width: 375px){
+      padding: 4px 13px 5px 13px;
+      font-size: 0.9rem;
+    }
 }
 .pixel-grid-container {
 
@@ -112,7 +123,7 @@
 
 .horizontal-wrapper {
   width: 100%;
-  height: 100vh;
+  
   overflow: hidden;
   position: relative;
 }
@@ -166,7 +177,7 @@
 .page {
   position: relative;
   min-width: 100vw;
-  height: 100vh;
+  
   background: #111;
   color: #fff;
   padding: 25px;
@@ -275,24 +286,49 @@
     font-size: 42px;
   }
   .page-title {
-    font-size: 28px;
+    font-size: 2.1rem !important;
     white-space: normal;
   }
+  .project-description{
+    font-size: .95rem !important;
+  }
   .mockupSection {
-    height: 280px;
+    height: 450px;
+    
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: fill !important;
+      border: 2px !important;
+    }
+  }
+}
+
+@media (min-width: 1440px){
+  .mockupSection{
+    height: 610px !important;
+    img{
+      object-fit: fill !important;
+    }
   }
 }
 
 /* Small Mobiles */
 @media (max-width: 480px) {
   .sectionHeading {
-    font-size: 20px;
+    font-size: 1.5rem !important;
   }
   .sectionText {
-    font-size: 12px;
+    font-size: 1rem !important;
+  }
+  .project-text{
+    font-size: 1rem !important;
   }
   .canvasHeader {
-    font-size: 18px;
+    font-size: 32px !important;
+  }
+  p{
+    font-size: 0.75rem !important;
   }
   .canvasText {
     font-size: 12px;
@@ -306,15 +342,90 @@
     padding: 4px 10px;
   }
   .page-index {
-    font-size: 32px;
+    font-size: 3rem !important;
   }
   .page-title {
-    font-size: 22px;
+    font-size: 3.2rem !important;
   }
   .project-description {
-    font-size: 12px;
+    font-size: 1.4rem !important;
   }
   .mockupSection {
-    height: 200px;
+    display: none;
+  }
+  .list-image{
+    padding-left: 2px;
+  }
+}
+
+@media(max-width: 375px){
+  .canvasHeader{
+    font-size: 23px !important;
+  }
+  p{
+    font-size: 0.65rem !important;
+  }
+  .pi-arrow-up-right{
+    font-size: 2.4rem !important;
+  }
+  .page-title{
+    font-size: 3rem !important;
+  }
+  .page-index{
+    margin-bottom: 8px !important;
+    font-size: 2.8rem !important;
+  }
+  .mockupSection{
+    display: none !important;
+  }
+  .project-description{
+    font-size: 1.3rem !important;
+  }
+}
+
+@media(max-width: 320px){
+  p{
+    font-size: 0.6rem !important;
+  }
+  .pi-arrow-up-right{
+    font-size: 2.4rem !important;
+  }
+  .page-title{
+    font-size: 2.2rem !important;
+  }
+  .page-index{
+    margin-bottom: 8px !important;
+    font-size: 2.3rem !important;
+  }
+  .mockupSection{
+    display: none !important;
+  }
+  .project-description{
+    font-size: 1.2rem !important;
+  }
+}
+
+
+@media(min-width: 2560px){
+  .sectionHeading{
+    font-size: 5rem !important;
+  }
+  .sectionText{
+    font-size: 2rem !important;
+  }
+  .project-text{
+    font-size: 2rem !important;
+  }
+  .canvasHeader{
+    font-size: 3rem !important;
+  }
+  .canvasText{
+    font-size: 1.2rem !important;
+  }
+  p{
+    font-size: 1.5rem !important;
+  }
+  .canvas-button{
+    font-size: 1.5rem !important;
   }
 }

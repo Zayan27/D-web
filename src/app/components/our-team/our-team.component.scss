@@ -3,6 +3,9 @@
       max-width: 1400px;
       margin: auto;
       text-align: center;
+      @media(max-width: 320px){
+        padding: 0rem;
+      }
     }
 
     .company-logo {
@@ -43,6 +46,12 @@
       font-size: 2.5rem;
       color: #ffffff;
       margin-bottom: 5rem;
+      @media(max-width: 375px){
+        font-size: 2rem;
+      }
+      @media(min-width: 2560px){
+        font-size: 5rem;
+      }
     }
 
     .team-grid {
@@ -65,6 +74,15 @@
   box-shadow: 0 20px 40px rgb(90 68 91 / 30%);
   position: relative;
   overflow: visible; 
+  @media(max-width: 375px){
+    height: 310px;
+    width: 280px;
+  }
+
+  @media(max-width: 320px){
+    height: 270px;
+    width: 250px;
+  }
 }
 
 .profile-image {
@@ -121,12 +139,7 @@
         padding-top:2rem;
         
       }
-      .member-name{
-         padding-right: 44px;
-      }
-      .member-title {
-        padding-right: 44px;
-      }
+      
     
     }
  

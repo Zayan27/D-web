@@ -133,6 +133,9 @@ $background-color: #520763;
   @media (max-width: 480px) {
     font-size: 2.2rem;
   }
+  @media (max-width: 320px) {
+    font-size: 2rem;
+  }
 }
 
 p {
@@ -144,5 +147,53 @@ p {
 
   @media (max-width: 480px) {
     font-size: 0.9rem;
+  }
+   @media (max-width: 320px) {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width : 2560px){
+  .mainContainer{
+    margin-top: 415px !important;
+  }
+  .mainHeading{
+    font-size: 5rem;
+  }
+  .lead{
+    font-size: 1.8rem;
+  }
+  .letsConnect-btn{
+    font-size: 1.7rem;
+    padding: 30px 28px 30px 28px;
+
+    i{
+      font-size: 1.8rem;
+    }
+  }
+
+  .service-btn{
+    font-size: 1.7rem;
+    padding: 30px 28px 30px 28px;
+  }
+}
+
+
+@media (max-width: 320px){
+  .bothButtons{
+    gap: 1rem !important;
+  }
+  .letsConnect-btn{
+    font-size: 0.8rem;
+    padding: 2px 13px 2px 13px;
+
+    i{
+      font-size: 0.9rem;
+    }
+  }
+
+  .service-btn{
+    font-size: 0.8rem;
+    padding: 2px 13px 2px 13px;
   }
 }

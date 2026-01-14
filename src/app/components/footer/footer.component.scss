@@ -25,11 +25,14 @@ grid-row-gap: 0px;
 
 .mainHeading {
   
-  font-family: "Special Gothic Expanded One", sans-serif;
+  
   font-size: 1.8rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   line-height: 1.1; 
+  @media(min-width: 2300px){
+        font-size: 2.1rem;
+      }
   .gradientText {
   background: linear-gradient(90deg, rgb(56, 40, 56) 0%, rgba(181, 100, 204, 1) 100%);
   -webkit-background-clip: text;
@@ -53,9 +56,20 @@ grid-row-gap: 0px;
 }
 
 .social-links{
-    li a{
+    li{
+      font-size: 16px;
+      @media(min-width: 2300px){
+        font-size: 1.6rem;
+      }
+    } a{
+        display: flex;
+        align-items: center;
+        gap: 8px;
         text-decoration: none;
         cursor: pointer;
+        i{
+          color: #FFF;
+        }
     }
 }
 
@@ -172,4 +186,41 @@ li:hover{
             color: #111;
         }
     }
+}
+
+@media(max-width: 340px){
+  .sendmailWrapper{
+    flex-direction: column;
+    align-items: start !important;
+    justify-content: flex-start !important;
+  }
+}
+
+@media(min-width: 2300px){
+  h5{
+    font-size: 1.5rem !important;
+  }
+  .quickAccessList li{
+    font-size: 1.2rem !important;
+  }
+
+  p{
+    font-size: 1.2rem !important;
+  }
+
+  .newsLetterSend a{
+    font-size: 1.1rem !important;
+    padding: 8px 15px 8px 15px;
+  }
+
+  .custom-field span{
+    font-size: 1rem !important;
+  }
+  .letsTalk-btn{
+    font-size: 1.4rem !important;
+  }
+
+  .privacyText{
+    font-size: 1.4rem !important;
+  }
 }

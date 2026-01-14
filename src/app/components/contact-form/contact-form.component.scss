@@ -26,6 +26,11 @@
             filter: blur(100px);
             opacity: 0.6;
             z-index: -1;
+            @media(min-width: 2300px){
+                bottom: 164px !important;
+                width: 700px !important;
+                height: 700px !important;
+            }
         }
 
         .contact-container {
@@ -34,9 +39,13 @@
             border-radius: 24px;
             border: 1px solid rgba(255, 255, 255, 0.2);
             padding: 48px;
-            max-width: 95%;
+            
             width: 100%;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+
+            @media(min-width: 2300px){
+               padding: 150px !important;
+            }
         }
 
         .contact-content {
@@ -88,12 +97,28 @@
             line-height: 1.1;
             margin-bottom: 32px;
             text-transform: uppercase;
+
+            @media(max-width: 375px){
+                font-size: 1rem !important;
+            }
+            @media(max-width: 450px){
+                font-size: 1.2rem !important;
+            }
+            @media(min-width: 2560px){
+                font-size: 5rem !important;
+            }
         }
 
         .benefits {
             list-style: none;
             margin-bottom: 32px;
             padding: 0;
+            @media(max-width: 375px){
+                margin-bottom: 12px !important;
+            }
+            @media(max-width: 450px){
+                margin-bottom: 12px !important;
+            }
         }
 
         .benefits li {
@@ -105,6 +130,15 @@
             display: flex;
             gap: 9px;
             align-items: center;
+            @media(max-width: 375px){
+                font-size: .65rem !important;
+            }
+            @media(max-width: 455px){
+                font-size: .75rem !important;
+            }
+            @media(min-width: 2560px){
+                font-size: 1.4rem !important;
+            }
         }
         .benefits li i{
             padding: 0;
@@ -134,6 +168,16 @@
             color: white;
             text-decoration: none;
             font-size: 16px;
+
+            @media(max-width: 375px){
+                font-size: 0.7rem !important;
+            }
+            @media(max-width: 455px){
+                font-size: .7rem !important;
+            }
+            @media(min-width: 2560px){
+                font-size: 1.2rem !important;
+            }
         }
 
         .book-call-text {
@@ -141,7 +185,17 @@
             font-size: 14px;
             margin-bottom: 0px;
             padding:15px 0 15px 0px ;
-
+            @media(max-width: 375px){
+                font-size: 0.85rem !important;
+                padding:10px 0 10px 0px !important;
+            }
+            @media(max-width: 455px){
+                font-size: .85rem !important;
+                padding:10px 0 10px 0px !important;
+            }
+            @media(min-width: 2560px){
+                font-size: 1.4rem !important;
+            }
         }
 
         .book-call-btn {
@@ -165,6 +219,12 @@
             border-radius: 20px;
             padding: 32px;
             border: 1px solid rgba(255, 255, 255, 0.1);
+            @media(max-width: 375px){
+                padding: 18px !important;
+            }
+            @media(max-width: 450px){
+                padding: 22px !important;
+            }
         }
 
         .service-selection {
@@ -176,6 +236,15 @@
             font-size: 16px;
             margin-bottom: 12px;
             font-weight: 600;
+            @media(max-width: 375px){
+                font-size: 0.85rem !important;
+            }
+            @media(max-width: 450px){
+                font-size: 0.9rem !important;
+            }
+            @media(min-width: 2560px){
+                font-size: 1.3rem !important;
+            }
         }
 
         .service-tags {
@@ -193,6 +262,15 @@
             border: 1px solid rgba(255, 255, 255, 0.2);
             cursor: pointer;
             transition: all 0.3s ease;
+            @media(max-width: 375px){
+                font-size: 0.5rem !important;
+            }
+            @media(max-width: 450px){
+                font-size: 0.6rem !important;
+            }
+            @media(min-width: 2560px){
+                font-size: 1.1rem !important;
+            }
         }
 
         .service-tag:hover,
@@ -210,6 +288,15 @@
             font-size: 16px;
             margin-bottom: 12px;
             font-weight: 600;
+            @media(max-width: 375px){
+                font-size: 0.85rem !important;
+            }
+            @media(max-width: 450px){
+                font-size: 0.9rem !important;
+            }
+            @media(min-width: 2560px){
+                font-size: 1.3rem !important;
+            }
         }
 
         .budget-tags {
@@ -227,6 +314,15 @@
             border: 1px solid rgba(255, 255, 255, 0.2);
             cursor: pointer;
             transition: all 0.3s ease;
+            @media(max-width: 375px){
+                font-size: 0.5rem !important;
+            }
+            @media(max-width: 450px){
+                font-size: 0.6rem !important;
+            }
+            @media(min-width: 2560px){
+                font-size: 1.1rem !important;
+            }
         }
 
         .budget-tag:hover,
@@ -251,6 +347,15 @@
             font-size: 14px;
             margin-bottom: 8px;
             display: block;
+            @media(max-width: 375px){
+                font-size: 0.65rem !important;
+            }
+            @media(max-width: 450px){
+                font-size: 0.7rem !important;
+            }
+            @media(min-width: 2560px){
+                font-size: 1.2rem !important;
+            }
         }
 
         .form-group input,
@@ -263,6 +368,15 @@
             color: white;
             font-size: 14px;
             transition: all 0.3s ease;
+            @media(max-width: 375px){
+                font-size: 0.65rem !important;
+            }
+            @media(max-width: 450px){
+                font-size: 0.7rem !important;
+            }
+            @media(min-width: 2560px){
+                font-size: 1.2rem !important;
+            }
         }
 
         .form-group input::placeholder,
@@ -293,6 +407,9 @@
             margin-bottom: 24px;
             cursor: pointer;
             transition: all 0.3s ease;
+            @media(min-width: 2560px){
+                font-size: 1.3rem !important;
+            }
         }
 
         .file-upload:hover {
@@ -311,6 +428,9 @@
             cursor: pointer;
             width: 100%;
             transition: all 0.3s ease;
+             @media(min-width: 2560px){
+                font-size: 1.4rem !important;
+            }
         }
 
         .submit-btn:hover {
