@@ -1,6 +1,6 @@
 // Color Variables
-$primary-color: #6C06CB;
-$secondary-color: #AA31EE;
+$primary-color: #ad62f4;
+$secondary-color: #e4dde8;
 $background-color: #520763;
 $black-bg: #0a0a0a;
 $dark-card: #1a1a1a;
@@ -44,15 +44,102 @@ $darker-card: #151515;
 // Hero Section
 .hero-section {
   position: relative;
-  background: linear-gradient(135deg, $primary-color 20%, $secondary-color 50%, $background-color 100%);
-  color: white;
-  padding: 100px 20px;
-  text-align: center;
-  overflow: hidden;
-  min-height: 450px;
+  min-height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  padding: 2rem;
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
+
+    .brand-logo {
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      font-weight: 700;
+
+      .logo-text {
+        color: #fff;
+      }
+
+      .logo-accent {
+        // background: linear-gradient(45deg, rgb(201 176 201) 0%, rgba(181, 100, 204, 1) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+    }
+
+    .hero-title {
+      font-size: 4rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      background: linear-gradient(45deg, rgb(201 176 201) 0%, rgba(181, 100, 204, 1) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: glow 3s ease-in-out infinite;
+    }
+
+    .hero-subtitle {
+      font-size: 1.5rem;
+      color: #b0b0b0;
+      margin-bottom: 1rem;
+    }
+
+    .last-updated {
+      color: #888;
+      font-size: 0.9rem;
+    }
+  }
+
+  .hero-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    .gradient-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.3;
+      animation: float 20s ease-in-out infinite;
+
+      &.orb-1 {
+        width: 400px;
+        height: 400px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        top: -200px;
+        left: -200px;
+        animation-delay: 0s;
+      }
+
+      &.orb-2 {
+        width: 300px;
+        height: 300px;
+        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        bottom: -150px;
+        right: -150px;
+        animation-delay: 7s;
+      }
+
+      &.orb-3 {
+        width: 350px;
+        height: 350px;
+      background: linear-gradient(45deg, rgb(201 176 201) 0%, rgb(147, 64, 170) 100%);
+        top: 50%;
+        right: 10%;
+        animation-delay: 14s;
+      }
+    }
+  }
 }
 
 .hero-background {
@@ -164,7 +251,7 @@ $darker-card: #151515;
   box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
   position: relative;
   z-index: 2;
-  border: 1px solid rgba($primary-color, 0.2);
+  border: 1px solid rgba(rgb(231, 126, 231), 0.2);
 
   h3 {
     margin-bottom: 25px;
@@ -186,7 +273,7 @@ $darker-card: #151515;
   gap: 12px;
   padding: 18px 20px;
   background: $darker-card;
-  border: 1px solid rgba($primary-color, 0.3);
+  border: 1px solid rgba(rgb(231, 126, 231), 0.2);
   border-radius: 12px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -198,7 +285,7 @@ $darker-card: #151515;
   &:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 30px rgba($primary-color, 0.5);
-    background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+    background: linear-gradient(135deg, $primary-color 10%, $secondary-color 90%);
     color: white;
     border-color: $secondary-color;
   }
@@ -239,11 +326,11 @@ $darker-card: #151515;
 
 // Important Notes Section
 .important-notes {
-  background: linear-gradient(135deg, $primary-color 0%, $secondary-color 50%, $background-color 100%);
+  background: linear-gradient(45deg, rgb(201 176 201) 0%, rgba(181, 100, 204, 1) 100%);
   padding: 40px;
   border-radius: 20px;
   margin-bottom: 40px;
-  box-shadow: 0 15px 40px rgba($primary-color, 0.4);
+  box-shadow: 0 15px 40px rgba(rgb(231, 126, 231), 0.2);
   color: white;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -315,7 +402,7 @@ $darker-card: #151515;
   padding: 40px;
   border-radius: 20px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba($primary-color, 0.2);
+  border: 1px solid rgba(rgb(231, 126, 231), 0.2);
   scroll-margin-top: 30px;
   transition: all 0.3s ease;
 
@@ -346,7 +433,7 @@ $darker-card: #151515;
   font-size: 40px;
   color: $secondary-color;
   min-width: 40px;
-  filter: drop-shadow(0 0 10px rgba($secondary-color, 0.5));
+  filter: drop-shadow(0 0 10px rgba(rgb(231, 126, 231), 0.2));
 }
 
 .section-content {
@@ -370,7 +457,7 @@ $darker-card: #151515;
     color: $secondary-color;
     font-weight: bold;
     font-size: 20px;
-    filter: drop-shadow(0 0 5px rgba($secondary-color, 0.5));
+    filter: drop-shadow(0 0 5px rgba(rgb(231, 126, 231), 0.2));
   }
 }
 
@@ -380,7 +467,7 @@ $darker-card: #151515;
 }
 
 .contact-card {
-  background: linear-gradient(135deg, $primary-color 0%, $secondary-color 50%, $background-color 100%);
+  background: linear-gradient(45deg, rgb(201 176 201) 0%, rgba(181, 100, 204, 1) 100%);
   color: white;
   padding: 45px;
   border-radius: 20px;
@@ -449,7 +536,7 @@ $darker-card: #151515;
   text-align: center;
   padding: 35px 20px;
   margin-top: 80px;
-  border-top: 1px solid rgba($primary-color, 0.3);
+  border-top: 1px solid rgba(rgb(231, 126, 231), 0.2);
 
   p {
     margin: 0;
