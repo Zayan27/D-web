@@ -18,7 +18,7 @@
   </header>
 
   <!-- Navigation -->
-  <nav class="table-of-contents">
+  <nav class="table-of-contents" #quickNav>
     <h3>Quick Navigation</h3>
     <div class="toc-grid">
       <button 
@@ -81,4 +81,15 @@
   <footer class="footer">
     <p>&copy; 2026 D'Web Solutions. All rights reserved.</p>
   </footer>
+
+
+
 </div>
+
+  <button
+    class="back-to-top"
+    *ngIf="showBackToTop"
+    (click)="scrollToTop()"
+    aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>

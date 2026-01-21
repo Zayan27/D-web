@@ -13,6 +13,7 @@ import { FullPageMenuComponent } from '../../components/full-page-menu/full-page
 import { OurClientsComponent } from '../../components/our-clients/our-clients.component';
 import { OurTeamComponent } from '../../components/our-team/our-team.component';
 
+
 @Component({
   selector: 'app-home-layout',
   standalone: true,
@@ -20,7 +21,7 @@ import { OurTeamComponent } from '../../components/our-team/our-team.component';
       WhoWeAreComponent, WhyUsComponent, OurServicesComponent,
       ProjectsComponent, TestimonialCompComponent,ContactComponent,
     FooterComponent
-  , OurTeamComponent],
+  , OurTeamComponent, FullPageMenuComponent],
   templateUrl: './home-layout.component.html',
   styleUrl: './home-layout.component.scss'
 })
