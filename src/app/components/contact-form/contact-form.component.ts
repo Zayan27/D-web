@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-contact-form',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, RouterLink],
   templateUrl: './contact-form.component.html',
   styleUrls: ['./contact-form.component.scss']
 })
