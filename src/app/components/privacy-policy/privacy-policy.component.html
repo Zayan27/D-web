@@ -1,1 +1,171 @@
-<p>privacy-policy works!</p>
+<div class="privacy-policy-container">
+  <!-- Header Section -->
+  <header class="hero-section">
+    <div class="hero-content">
+       <h1 class="mainHeading">
+                <span class="gradientText">D'</span>
+                <span class="mainHeadpart"> WEB <br class="d-none d-md-block"> SOLUTIONS.</span>
+        </h1>
+      <h1 class="hero-title">Privacy Policy</h1>
+      <p class="hero-subtitle">Your privacy is important to us</p>
+      <p class="last-updated">Last Updated: {{ lastUpdated }}</p>
+    </div>
+    <div class="hero-background">
+      <div class="gradient-orb orb-1"></div>
+      <div class="gradient-orb orb-2"></div>
+      <div class="gradient-orb orb-3"></div>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="table-of-contents">
+    <h3>Quick Navigation</h3>
+    <div class="toc-grid">
+      @for (section of sections; track section.id) {
+        <button 
+          (click)="scrollToSection(section.id)"
+          class="toc-item">
+          <span class="toc-icon">{{ section.icon }}</span>
+          <span>{{ section.title }}</span>
+        </button>
+      }
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="content-section">
+    <div class="intro-text">
+      <p>
+        At D'Web Solutions, we are committed to protecting your privacy and ensuring the security of your personal information. 
+        This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website 
+        or use our services.
+      </p>
+    </div>
+
+    <div class="sections-container">
+      @for (section of sections; track section.id) {
+        <section 
+          [id]="section.id" 
+          class="policy-section">
+          <div class="section-header">
+            <span class="section-icon">{{ section.icon }}</span>
+            <h2>{{ section.title }}</h2>
+          </div>
+          <div class="section-content">
+            @for (paragraph of section.content; track $index) {
+              <p class="content-paragraph">
+                {{ paragraph }}
+              </p>
+            }
+          </div>
+        </section>
+      }
+    </div>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+      <div class="contact-card">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or concerns about this Privacy Policy, please contact us:</p>
+        <div class="contact-info">
+          <div class="contact-item">
+            <span class="contact-icon">📧</span>
+            <span>contact&#64;dwebsolutions.org</span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">🌐</span>
+            <span><a href="https://dwebsolutions.org">Contact us</a></span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 D'Web Solutions. All rights reserved.</p>
+  </footer>
+</div><div class="privacy-policy-container">
+  <!-- Header Section -->
+  <header class="hero-section">
+    <div class="hero-content">
+      <div class="brand-logo">
+        <span class="logo-text">D'Web</span>
+        <span class="logo-accent">Solutions</span>
+      </div>
+      <h1 class="hero-title">Privacy Policy</h1>
+      <p class="hero-subtitle">Your privacy is important to us</p>
+      <p class="last-updated">Last Updated: {{ lastUpdated }}</p>
+    </div>
+    <div class="hero-background">
+      <div class="gradient-orb orb-1"></div>
+      <div class="gradient-orb orb-2"></div>
+      <div class="gradient-orb orb-3"></div>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="table-of-contents">
+    <h3>Quick Navigation</h3>
+    <div class="toc-grid">
+      <button 
+        *ngFor="let section of sections" 
+        (click)="scrollToSection(section.id)"
+        class="toc-item">
+        <i [class]="section.icon + ' toc-icon'"></i>
+        <span>{{ section.title }}</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="content-section">
+    <div class="intro-text">
+      <p>
+        At D'Web Solutions, we are committed to protecting your privacy and ensuring the security of your personal information. 
+        This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website 
+        or use our services.
+      </p>
+    </div>
+
+    <div class="sections-container">
+      <section 
+        *ngFor="let section of sections" 
+        [id]="section.id" 
+        class="policy-section">
+        <div class="section-header">
+          <i [class]="section.icon + ' section-icon'"></i>
+          <h2>{{ section.title }}</h2>
+        </div>
+        <div class="section-content">
+          <p *ngFor="let paragraph of section.content" class="content-paragraph">
+            {{ paragraph }}
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+      <div class="contact-card">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or concerns about this Privacy Policy, please contact us:</p>
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-envelope contact-icon"></i>
+            <span>contact&#64;dwebsolutions.org</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-globe contact-icon"></i>
+            <span><a href="https://dwebsolutions.org">Contact us</a></span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 D'Web Solutions. All rights reserved.</p>
+  </footer>
+</div>

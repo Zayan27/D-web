@@ -1,0 +1,103 @@
+<div class="refund-policy-container">
+  <!-- Header Section -->
+  <header class="hero-section">
+    <div class="hero-content">
+       <div class="hero-content">
+       <h1 class="mainHeading">
+                <span class="gradientText">D'</span>
+                <span class="mainHeadpart"> WEB <br class="d-none d-md-block"> SOLUTIONS.</span>
+        </h1>
+      <h1 class="hero-title">Refund Policy</h1>
+      <p class="hero-subtitle">Understanding our refund and cancellation terms</p>
+      <p class="last-updated">Last Updated: {{ lastUpdated }}</p>
+    </div>
+      
+    </div>
+    <div class="hero-background">
+      <div class="gradient-orb orb-1"></div>
+      <div class="gradient-orb orb-2"></div>
+      <div class="gradient-orb orb-3"></div>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="table-of-contents">
+    <h3>Quick Navigation</h3>
+    <div class="toc-grid">
+      <button 
+        *ngFor="let section of sections" 
+        (click)="scrollToSection(section.id)"
+        class="toc-item">
+        <i [class]="section.icon + ' toc-icon'"></i>
+        <span>{{ section.title }}</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="content-section">
+    <div class="intro-text">
+      <p>
+        At D'Web Solutions, we value transparency and fair business practices. This Refund Policy outlines the terms and 
+        conditions regarding refunds, cancellations, and payment obligations for our web development and design services. 
+        Please read this policy carefully before engaging our services.
+      </p>
+    </div>
+
+    <!-- Important Notes Highlight -->
+    <div class="important-notes">
+      <h2 class="notes-title">
+        <i class="fas fa-info-circle"></i>
+        Key Points to Remember
+      </h2>
+      <div class="notes-grid">
+        <div *ngFor="let note of importantNotes" class="note-card">
+          <i [class]="note.icon + ' note-icon'"></i>
+          <h3>{{ note.title }}</h3>
+          <p>{{ note.description }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Policy Sections -->
+    <div class="sections-container">
+      <section 
+        *ngFor="let section of sections" 
+        [id]="section.id" 
+        class="policy-section">
+        <div class="section-header">
+          <i [class]="section.icon + ' section-icon'"></i>
+          <h2>{{ section.title }}</h2>
+        </div>
+        <div class="section-content">
+          <p *ngFor="let paragraph of section.content" class="content-paragraph">
+            {{ paragraph }}
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+      <div class="contact-card">
+        <h2>Questions About Our Refund Policy?</h2>
+        <p>If you have any questions or need clarification regarding our refund policy, please don't hesitate to contact us:</p>
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-envelope contact-icon"></i>
+            <span>info&#64;dwebsolution.org</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-globe contact-icon"></i>
+            <span><a href="https://dwebsolutions.org">Visit our website</a></span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 D'Web Solutions. All rights reserved.</p>
+  </footer>
+</div>
