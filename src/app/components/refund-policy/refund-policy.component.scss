@@ -2,7 +2,7 @@
 $primary-color: #ad62f4;
 $secondary-color: #e4dde8;
 $background-color: #520763;
-$black-bg: #0a0a0a;
+$black-bg: #000;
 $dark-card: #1a1a1a;
 $darker-card: #151515;
 .mainHeading {
@@ -75,7 +75,7 @@ $darker-card: #151515;
     }
 
     .hero-title {
-      font-size: 4rem;
+      font-size: 2.5rem !important;
       font-weight: 800;
       margin-bottom: 1rem;
       background: linear-gradient(45deg, rgb(201 176 201) 0%, rgba(181, 100, 204, 1) 100%);
@@ -152,40 +152,9 @@ $darker-card: #151515;
   z-index: 0;
 }
 
-.gradient-orb {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(100px);
-  opacity: 0.3;
-  animation: float 8s ease-in-out infinite;
-}
 
-.orb-1 {
-  width: 500px;
-  height: 500px;
-  background: $primary-color;
-  top: -150px;
-  left: -150px;
-}
 
-.orb-2 {
-  width: 600px;
-  height: 600px;
-  background: $secondary-color;
-  bottom: -200px;
-  right: -200px;
-  animation-delay: 2s;
-}
 
-.orb-3 {
-  width: 400px;
-  height: 400px;
-  background: $background-color;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation-delay: 4s;
-}
 
 @keyframes float {
   0%, 100% {
@@ -219,14 +188,6 @@ $darker-card: #151515;
   text-shadow: 0 0 20px rgba($secondary-color, 0.5);
 }
 
-.hero-title {
-  font-size: 56px;
-  font-weight: 800;
-  margin-bottom: 20px;
-  text-shadow: 0 0 30px rgba($primary-color, 0.5);
-  letter-spacing: -1px;
-}
-
 .hero-subtitle {
   font-size: 22px;
   margin-bottom: 15px;
@@ -238,7 +199,6 @@ $darker-card: #151515;
   font-size: 15px;
   opacity: 0.85;
   margin-top: 15px;
-  font-style: italic;
 }
 
 // Table of Contents
@@ -326,13 +286,13 @@ $darker-card: #151515;
 
 // Important Notes Section
 .important-notes {
-  background: linear-gradient(45deg, rgb(201 176 201) 0%, rgba(181, 100, 204, 1) 100%);
+  background: linear-gradient(45deg, rgb(139 124 139) 0%, rgb(115 46 135) 100%);
   padding: 40px;
   border-radius: 20px;
   margin-bottom: 40px;
-  box-shadow: 0 15px 40px rgba(rgb(231, 126, 231), 0.2);
+  
   color: white;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  
 }
 
 .notes-title {
@@ -344,7 +304,7 @@ $darker-card: #151515;
 
   i {
     font-size: 36px;
-    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+    
   }
 }
 
@@ -372,8 +332,8 @@ $darker-card: #151515;
     font-size: 40px;
     margin-bottom: 15px;
     display: block;
-    color: white;
-    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+    color: $secondary-color;
+    
   }
 
   h3 {
@@ -407,7 +367,7 @@ $darker-card: #151515;
   transition: all 0.3s ease;
 
   &:hover {
-    box-shadow: 0 12px 35px rgba($primary-color, 0.4);
+    box-shadow: 0 4px 12px rgba($primary-color, 0.4);
     transform: translateY(-3px);
     border-color: $secondary-color;
   }
@@ -467,12 +427,11 @@ $darker-card: #151515;
 }
 
 .contact-card {
-  background: linear-gradient(45deg, rgb(201 176 201) 0%, rgba(181, 100, 204, 1) 100%);
-  color: white;
+  background: linear-gradient(45deg, rgb(139 124 139) 0%, rgb(115 46 135) 100%);
   padding: 45px;
   border-radius: 20px;
-  box-shadow: 0 15px 40px rgba($primary-color, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: $secondary-color;
+  
 
   h2 {
     font-size: 36px;
@@ -526,7 +485,11 @@ $darker-card: #151515;
 .contact-icon {
   font-size: 26px;
   min-width: 26px;
-  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+  
+}
+.phNo{
+  border: none !important;
+  text-decoration: none !important;
 }
 
 // Footer
@@ -608,4 +571,31 @@ $darker-card: #151515;
 // Smooth Scroll
 html {
   scroll-behavior: smooth;
+}
+
+.back-to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7f00ff, #e100ff);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+
+  i {
+    font-size: 18px;
+  }
 }

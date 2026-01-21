@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener, ElementRef, ViewChild } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
 import { CommonModule } from '@angular/common';
 
@@ -18,6 +18,9 @@ import { CommonModule } from '@angular/common';
   ]
 })
 export class RefundPolicyComponent implements OnInit {
+  @ViewChild('quickNav', { static: true }) quickNav!: ElementRef;
+  showBackToTop = false;
+  quickNavOffset = 0;
   lastUpdated = new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
   
   sections = [
@@ -87,6 +90,20 @@ export class RefundPolicyComponent implements OnInit {
 
   ngOnInit(): void {
     window.scrollTo(0, 0);
+    setTimeout(() => {
+      const rect = this.quickNav.nativeElement.getBoundingClientRect();
+      this.quickNavOffset = rect.bottom + window.scrollY;
+    });
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll(): void {
+    const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+    this.showBackToTop = scrollPosition > this.quickNavOffset;
+  }
+
+  scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   scrollToSection(sectionId: string): void {

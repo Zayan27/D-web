@@ -17,7 +17,7 @@
     </div>
   </header>
   <!-- Navigation -->
-  <nav class="table-of-contents">
+  <nav class="table-of-contents" #quickNav>
     <h3>Quick Navigation</h3>
     <div class="toc-grid">
       <button 
@@ -84,8 +84,8 @@
             <span>info&#64;dwebsolution.org</span>
           </div>
           <div class="contact-item">
-            <i class="fas fa-globe contact-icon"></i>
-            <span><a href="https://dwebsolutions.org">Visit our website</a></span>
+            <i class="fas fa-phone contact-icon"></i>
+            <span><a href="https://wa.me/+923360069977" class="m-0 phNo" target="_blank">+92 336 0069977</a></span>
           </div>
         </div>
       </div>
@@ -97,3 +97,11 @@
     <p>&copy; 2026 D'Web Solutions. All rights reserved.</p>
   </footer>
 </div>
+
+<button
+  class="back-to-top"
+  *ngIf="showBackToTop"
+  (click)="scrollToTop()"
+  aria-label="Back to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
