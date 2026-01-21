@@ -7,7 +7,7 @@
   z-index: 9999;
   display: flex;
   flex-direction: column;
-  
+  overflow-x: hidden;
   transform: translateY(-100%);
   opacity: 0;
   pointer-events: none;
@@ -172,9 +172,9 @@
   }
 
   .background-video {
-    margin: 1rem auto;
+    margin: 2rem auto;
     width: 95%;
-    height: 200px;
+    height: 410px;
     border-radius: 16px;
     object-fit: cover;
   }
@@ -207,6 +207,7 @@
   }
 
   .background-video {
+    margin: auto;
     height: 160px;
   }
 }
