@@ -22,7 +22,7 @@
     margin-top: 8rem;
     padding-left: 20px;
     h1{
-        font-size: 5rem;
+        font-size: clamp(2rem, 4vw + 1.2rem, 5rem);
         font-weight: 600;
     }
     p{
@@ -45,7 +45,7 @@
   text-align: left;
 
   li {
-    font-size: 1.3rem;
+    font-size: clamp(1rem, 1vw + 0.5rem, 1.3rem);
     font-weight: 500;
     cursor: pointer;
     border-bottom: 1px solid;
@@ -83,7 +83,7 @@
     position: absolute;
     top: 1rem;
     right: 1rem;
-    font-size: 3rem;
+    font-size: clamp(2rem, 2vw + 1rem, 3rem);
     background: none;
     border: none;
     color: white;
@@ -109,7 +109,7 @@
   top: 1rem;
   right: 1rem;
   z-index: 999;
-  font-size: 2rem;
+  font-size: clamp(1.8rem, 1vw + 1rem, 2rem);
   background: none;
   border: none;
   color: #fff;
@@ -128,11 +128,10 @@
     text-align: center;
 
     h1 {
-      font-size: 2.5rem;
+      font-size: clamp(2rem, 4vw + 1.2rem, 5rem);
     }
 
     p {
-      font-size: 0.9rem;
       color: #d0d0d0;
       text-align: center;
       margin-bottom: 0.3rem;
@@ -157,7 +156,7 @@
     margin-top: 1rem;
 
     li {
-      font-size: 1.1rem;
+      font-size: clamp(1rem, 1vw + 0.5rem, 1.3rem);
       padding: 10px 0;
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
@@ -167,14 +166,13 @@
     }
 
     li i {
-      font-size: 0.8rem;
     }
   }
 
   .background-video {
     margin: 2rem auto;
     width: 95%;
-    height: 410px;
+    height: clamp(160px, 40vh, 410px);
     border-radius: 16px;
     object-fit: cover;
   }
@@ -182,32 +180,12 @@
   .menu-close {
     top: 1rem;
     right: 1rem;
-    font-size: 2rem;
+    font-size: clamp(2rem, 2vw + 1rem, 3rem);
   }
 
   .menu-toggle {
     top: 0.7rem;
     right: 0.7rem;
-    font-size: 1.8rem;
-  }
-}
-
-/* Very small screens */
-@media (max-width: 480px) {
-  .menuHeader h1 {
-    font-size: 2rem;
-  }
-
-  .menuHeader p {
-    font-size: 0.85rem;
-  }
-
-  .menu-content ul li {
-    font-size: 1rem;
-  }
-
-  .background-video {
-    margin: auto;
-    height: 160px;
+    font-size: clamp(1.8rem, 1vw + 1rem, 2rem);
   }
 }

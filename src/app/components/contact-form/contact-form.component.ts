@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from "@angular/router";
+import { ContactService } from '../../services/contact.service';
 
 @Component({
   selector: 'app-contact-form',
@@ -25,7 +25,7 @@ export class ContactComponent {
   modalType = '';
 
 
-  constructor(private http: HttpClient) {}
+  constructor(private contactService: ContactService) {}
 
   // -------------------------
   // Selection Handlers
@@ -108,7 +108,7 @@ export class ContactComponent {
       formData.append('file', this.selectedFile);
     }
 
-    this.http.post('https://contact-form-backend.netlify.app/.netlify/functions/sendmail', formData)
+    this.contactService.sendContactEmail(formData)
       .subscribe({
         next: (res: any) => {
           

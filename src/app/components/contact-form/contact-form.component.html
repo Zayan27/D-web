@@ -106,7 +106,7 @@
     <p class="text-white refundText">Visit Our | <a routerLink="refund-policy" target="_blank">Refund Policy</a></p>
   </div>
 </div>
-<div class="modal-backdrop" *ngIf="modalVisible" (click)="closeModal()">
+<div class="modal-backdrop" *ngIf="modalVisible" tabindex="0" role="button" (click)="closeModal()" (keydown.enter)="closeModal()">
   <div class="modal-box" 
        [ngClass]="{'success': modalType === 'success', 'error': modalType === 'error'}"
        (click)="$event.stopPropagation()">

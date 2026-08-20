@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, ElementRef, ViewChildren, QueryList } from '@angular/core';
+import { Component, AfterViewInit, ElementRef, ViewChildren, QueryList, OnDestroy } from '@angular/core';
 import { gsap } from 'gsap';
 
 @Component({
@@ -8,12 +8,14 @@ import { gsap } from 'gsap';
   templateUrl: './our-team.component.html',
   styleUrl: './our-team.component.scss'
 })
-export class OurTeamComponent implements AfterViewInit {
+export class OurTeamComponent implements AfterViewInit, OnDestroy {
   balls = Array.from({ length: 6 }); // 6 balls
+  private ctx!: gsap.Context;
 
   @ViewChildren('ball') ballEls!: QueryList<ElementRef<HTMLDivElement>>;
 
   ngAfterViewInit(): void {
+    this.ctx = gsap.context(() => {
     this.ballEls.forEach((ref, i) => {
       const el = ref.nativeElement;
       const dir = i % 2 === 0 ? 1 : -1;
@@ -32,5 +34,10 @@ export class OurTeamComponent implements AfterViewInit {
         repeat: -1
       });
     });
+    });
+  }
+
+  ngOnDestroy(): void {
+    this.ctx?.revert();
   }
 }

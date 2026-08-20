@@ -4,7 +4,8 @@
       <h1 class="mt-4">SERVICES WE PROVIDE FOR OUR CLIENTS</h1>
       <div class="service-container mt-1 p-2">
         <p class="whyusText mt-3">
-          Our services are meticulously crafted to meet the unique needs of your business, seamlessly integrating innovation and expertise.
+          Our services are meticulously crafted to meet the unique needs of your business, seamlessly integrating
+          innovation and expertise.
         </p>
       </div>
     </div>
@@ -15,7 +16,8 @@
       <ul class="services-list">
         <li *ngFor="let item of items; let i = index" [class.active]="activeIndex === i">
           <div class="service-item-wrapper">
-            <div class="d-flex align-items-center justify-content-between p-3 toggle-header" (click)="toggleItem(i)">
+            <div class="d-flex align-items-center justify-content-between p-3 toggle-header" tabindex="0" role="button"
+              (click)="toggleItem(i)" (keydown.enter)="toggleItem(i)">
               <div>
                 <span class="numbers">{{ item.number }}</span>{{ item.title }}
               </div>
@@ -28,7 +30,9 @@
             <p>{{ item.description }}</p>
 
             <ul class="row techDiv-pills mt-2 d-flex gap-2 align-items-center">
-              <li *ngFor="let pills of item.techs"><p class="m-0">{{ pills }}</p></li>
+              <li *ngFor="let pills of item.techs">
+                <p class="m-0">{{ pills }}</p>
+              </li>
             </ul>
           </div>
           <hr>

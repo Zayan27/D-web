@@ -1,4 +1,5 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild, OnDestroy } from '@angular/core';
+import { ScrollService } from '../../shared/services/scroll.service';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
@@ -11,68 +12,83 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })
-export class ProjectsComponent implements AfterViewInit {
-   @ViewChild('gridContainer', { static: true }) gridContainer!: ElementRef<HTMLDivElement>;
+export class ProjectsComponent implements AfterViewInit, OnDestroy {
+  @ViewChild('gridContainer', { static: true }) gridContainer!: ElementRef<HTMLDivElement>;
   private time = 0;
   private pixelElements: HTMLDivElement[][] = [];
   private gridSize = 32;
+  private ctx!: gsap.Context;
+  private animationFrameId?: number;
+  currentYear = new Date().getFullYear();
+
+  constructor(private scrollService: ScrollService) { }
 
   ngAfterViewInit(): void {
     gsap.registerPlugin(ScrollTrigger);
 
     this.createPixelGrid();
     this.startAnimation();
-    const sections = gsap.utils.toArray<HTMLElement>('.horizontal-container .page');
-    // Animate pixel-grid-container scale + opacity on scroll
-    gsap.fromTo(
-      '.pixel-grid-container',
-      { scale: 0.5, opacity: 1 },
-      {
-        scale: 1,
-        opacity: 1,
-        duration: 1.5,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: '.pixel-grid-container',
-          start: 'top 90%',
-          end: 'bottom 50%',
-          scrub: true,
-        },
-      }
-    );
 
-    // Fade in overlay content after pixel scale
-    gsap.fromTo(
-      '.overlay-content',
-      { y: 50, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 1.2,
-        ease: 'power2.out',
+    this.ctx = gsap.context(() => {
+      const sections = gsap.utils.toArray<HTMLElement>('.horizontal-container .page');
+      // Animate pixel-grid-container scale + opacity on scroll
+      gsap.fromTo(
+        '.pixel-grid-container',
+        { scale: 0.5, opacity: 1 },
+        {
+          scale: 1,
+          opacity: 1,
+          duration: 1.5,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: '.pixel-grid-container',
+            start: 'top 90%',
+            end: 'bottom 50%',
+            scrub: true,
+          },
+        }
+      );
+
+      // Fade in overlay content after pixel scale
+      gsap.fromTo(
+        '.overlay-content',
+        { y: 50, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1.2,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: '.pixel-grid-container',
+            start: 'top 75%',
+            end: 'bottom 50%',
+            scrub: true,
+          },
+        }
+      );
+
+      gsap.to(sections, {
+        xPercent: -100 * (sections.length - 1),
+        ease: 'none',
         scrollTrigger: {
-          trigger: '.pixel-grid-container',
-          start: 'top 75%',
-          end: 'bottom 50%',
-          scrub: true,
+          trigger: '.horizontal-wrapper',
+          pin: true,
+          scrub: 1,
+          start: 'center center', // 👈 delay horizontal motion
+          end: () => `+=${sections.length * window.innerWidth}`,
+          invalidateOnRefresh: true,
+          anticipatePin: 1,
+          markers: false,
         },
-      }
-    );
-    
-    gsap.to(sections, {
-      xPercent: -100 * (sections.length - 1),
-      ease: 'none',
-      scrollTrigger: {
-        trigger: '.horizontal-wrapper',
-        pin: true,
-        scrub: 1,
-        start: 'center center', // 👈 delay horizontal motion
-        end: () => `+=${sections.length * window.innerWidth}`,
-        invalidateOnRefresh: true,
-        anticipatePin: 1,
-        markers: false,
-      },
+      });
     });
+  }
+
+  ngOnDestroy(): void {
+    this.ctx?.revert();
+    if (this.animationFrameId) {
+      cancelAnimationFrame(this.animationFrameId);
+    }
   }
 
   private createPixelGrid(): void {
@@ -117,13 +133,10 @@ export class ProjectsComponent implements AfterViewInit {
     }
 
     this.time += 0.03;
-    requestAnimationFrame(() => this.startAnimation());
+    this.animationFrameId = requestAnimationFrame(() => this.startAnimation());
   }
 
-   navigateTo(id: string): void {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+  navigateTo(id: string): void {
+    this.scrollService.scrollTo(id);
   }
 }

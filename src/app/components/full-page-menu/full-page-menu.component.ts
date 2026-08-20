@@ -1,44 +1,32 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild, OnDestroy } from '@angular/core';
 import gsap from 'gsap';
+import { ScrollService } from '../../shared/services/scroll.service';
+import { AutoplayVideoDirective } from '../../shared/directives/autoplay-video.directive';
 
 @Component({
   selector: 'app-full-page-menu',
   standalone: true,
-  imports: [],
+  imports: [AutoplayVideoDirective],
   templateUrl: './full-page-menu.component.html',
   styleUrl: './full-page-menu.component.scss'
 })
-export class FullPageMenuComponent implements AfterViewInit {
+export class FullPageMenuComponent implements AfterViewInit, OnDestroy {
   menuOpen = false;
+  private ctx = gsap.context(() => {});
+
+  constructor(private scrollService: ScrollService) {}
 
   @ViewChild('menuOverlay', { static: false }) menuOverlay!: ElementRef;
   @ViewChild('menuHeaderText') menuHeaderText!: ElementRef;
   @ViewChild('menu-content') menucontent!: ElementRef;
-  @ViewChild('bgVideo') bgVideo!: ElementRef<HTMLVideoElement>;
-
 
   ngAfterViewInit() {
-    const video = this.bgVideo.nativeElement;
-
-    video.muted = true;
-    video.playsInline = true;
-
-    const playVideo = () => {
-      video.play().catch(() => {
-        console.log('Autoplay blocked, retrying...');
-      });
-    };
-
-    if (video.readyState >= 2) {
-      playVideo();
-    } else {
-      video.addEventListener('canplay', playVideo, { once: true });
-    }
   }
   toggleMenu(): void {
   this.menuOpen = !this.menuOpen;
 
-  if (this.menuOpen) {
+  this.ctx.add(() => {
+    if (this.menuOpen) {
     // Set initial state for elements (only once)
     gsap.set(['.menuHeaderText', '.menu-content ul li'], { 
       opacity: 0, 
@@ -81,17 +69,19 @@ export class FullPageMenuComponent implements AfterViewInit {
       ease: 'power3.in'
     });
   }
+  });
 }
+
+  ngOnDestroy(): void {
+    this.ctx.revert();
+  }
 
 
 
 
 
   navigateTo(id: string): void {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-    }
+    this.scrollService.scrollTo(id);
     this.toggleMenu();
   }
 }

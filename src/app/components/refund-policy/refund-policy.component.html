@@ -1,11 +1,11 @@
 <div class="refund-policy-container">
   <!-- Header Section -->
- <header class="hero-section">
+  <header class="hero-section">
     <div class="hero-content">
-        <h1 class="mainHeading">
-                <span class="gradientText">D'</span>
-                <span class="mainHeadpart"> WEB <br class="d-none d-md-block"> SOLUTIONS.</span>
-        </h1>
+      <h1 class="mainHeading">
+        <span class="gradientText">D'</span>
+        <span class="mainHeadpart"> WEB <br class="d-none d-md-block"> SOLUTIONS.</span>
+      </h1>
       <h1 class="hero-title">Refund Policy</h1>
       <p class="hero-subtitle">Your refund privacy is important to us</p>
       <p class="last-updated">Last Updated: {{ lastUpdated }}</p>
@@ -20,10 +20,7 @@
   <nav class="table-of-contents" #quickNav>
     <h3>Quick Navigation</h3>
     <div class="toc-grid">
-      <button 
-        *ngFor="let section of sections" 
-        (click)="scrollToSection(section.id)"
-        class="toc-item">
+      <button *ngFor="let section of sections" (click)="scrollToSection(section.id)" class="toc-item">
         <i [class]="section.icon + ' toc-icon'"></i>
         <span>{{ section.title }}</span>
       </button>
@@ -34,8 +31,9 @@
   <main class="content-section">
     <div class="intro-text">
       <p>
-        At D'Web Solutions, we value transparency and fair business practices. This Refund Policy outlines the terms and 
-        conditions regarding refunds, cancellations, and payment obligations for our web development and design services. 
+        At D'Web Solutions, we value transparency and fair business practices. This Refund Policy outlines the terms and
+        conditions regarding refunds, cancellations, and payment obligations for our web development and design
+        services.
         Please read this policy carefully before engaging our services.
       </p>
     </div>
@@ -57,10 +55,7 @@
 
     <!-- Policy Sections -->
     <div class="sections-container">
-      <section 
-        *ngFor="let section of sections" 
-        [id]="section.id" 
-        class="policy-section">
+      <section *ngFor="let section of sections" [id]="section.id" class="policy-section">
         <div class="section-header">
           <i [class]="section.icon + ' section-icon'"></i>
           <h2>{{ section.title }}</h2>
@@ -77,7 +72,8 @@
     <section class="contact-section">
       <div class="contact-card">
         <h2>Questions About Our Refund Policy?</h2>
-        <p>If you have any questions or need clarification regarding our refund policy, please don't hesitate to contact us:</p>
+        <p>If you have any questions or need clarification regarding our refund policy, please don't hesitate to contact
+          us:</p>
         <div class="contact-info">
           <div class="contact-item">
             <i class="fas fa-envelope contact-icon"></i>
@@ -98,10 +94,6 @@
   </footer>
 </div>
 
-<button
-  class="back-to-top"
-  *ngIf="showBackToTop"
-  (click)="scrollToTop()"
-  aria-label="Back to top">
+<button class="back-to-top" *ngIf="showBackToTop" (click)="scrollToTop()" aria-label="Back to top">
   <i class="fas fa-arrow-up"></i>
 </button>

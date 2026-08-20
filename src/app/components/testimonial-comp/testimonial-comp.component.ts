@@ -1,4 +1,4 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit, OnDestroy } from '@angular/core';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
@@ -11,11 +11,19 @@ gsap.registerPlugin(ScrollTrigger);
   templateUrl: './testimonial-comp.component.html',
   styleUrl: './testimonial-comp.component.scss',
 })
-export class TestimonialCompComponent implements AfterViewInit {
+export class TestimonialCompComponent implements AfterViewInit, OnDestroy {
+  private ctx!: gsap.Context;
+
   ngAfterViewInit(): void {
     // Animate both rows (1 = left to right, -1 = right to left)
-    this.initMarquee('.scroll-row-1', 1);
-    this.initMarquee('.scroll-row-2', -1);
+    this.ctx = gsap.context(() => {
+      this.initMarquee('.scroll-row-1', 1);
+      this.initMarquee('.scroll-row-2', -1);
+    });
+  }
+
+  ngOnDestroy(): void {
+    this.ctx?.revert();
   }
 
   initMarquee(selector: string, direction: number): void {

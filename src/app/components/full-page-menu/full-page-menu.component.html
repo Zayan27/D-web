@@ -10,34 +10,45 @@
     <div class="row line"></div>
     <div class="row">
         <div class="col-12 col-md-6 d-flex">
-            <video #bgVideo
-  muted
-  loop
-  playsinline
-  preload="auto"
-  class="background-video">
-                <source src="https://res.cloudinary.com/div35uurv/video/upload/v1762709808/vip_3_qcmig7.mp4" type="video/mp4" />
+            <video appAutoplayVideo muted loop playsinline preload="auto" class="background-video">
+                <source src="https://res.cloudinary.com/div35uurv/video/upload/v1762709808/vip_3_qcmig7.mp4"
+                    type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
         </div>
         <div class="col-12 col-md-6">
-             <div class="menu-content">
+            <div class="menu-content">
                 <ul>
-                <li (click)="navigateTo('home')"><p><i class="pi pi-arrow-right"></i> HOME</p></li>
-                <li (click)="navigateTo('who-we-are')"><p><i class="pi pi-arrow-right"></i> WHO WE ARE</p></li>
-                <li (click)="navigateTo('why-us')"><p><i class="pi pi-arrow-right"></i> WHY US?</p></li>
-                <li (click)="navigateTo('our-services')"><p><i class="pi pi-arrow-right"></i> OUR SERVICES</p></li>
-                <li (click)="navigateTo('projects')"><p><i class="pi pi-arrow-right"></i> PROJECTS</p></li>
-                <li (click)="navigateTo('our-founders')"><p><i class="pi pi-arrow-right"></i> OUR FOUNDERS</p></li>
-                <li (click)="navigateTo('testimonial')"><p><i class="pi pi-arrow-right"></i> TESTIMONIALS</p></li>
-                <!-- <li (click)="navigateTo('our-clients')"><p><i class="pi pi-arrow-right"></i> OUR CLIENTS</p></li> -->
-                <li (click)="navigateTo('footer')"><p><i class="pi pi-arrow-right"></i> CONTACT</p></li>
+                    <li tabindex="0" role="button" (click)="navigateTo('home')" (keydown.enter)="navigateTo('home')">
+                        <p><i class="pi pi-arrow-right"></i> HOME</p>
+                    </li>
+                    <li tabindex="0" role="button" (click)="navigateTo('who-we-are')" (keydown.enter)="navigateTo('who-we-are')">
+                        <p><i class="pi pi-arrow-right"></i> WHO WE ARE</p>
+                    </li>
+                    <li tabindex="0" role="button" (click)="navigateTo('why-us')" (keydown.enter)="navigateTo('why-us')">
+                        <p><i class="pi pi-arrow-right"></i> WHY US?</p>
+                    </li>
+                    <li tabindex="0" role="button" (click)="navigateTo('our-services')" (keydown.enter)="navigateTo('our-services')">
+                        <p><i class="pi pi-arrow-right"></i> OUR SERVICES</p>
+                    </li>
+                    <li tabindex="0" role="button" (click)="navigateTo('projects')" (keydown.enter)="navigateTo('projects')">
+                        <p><i class="pi pi-arrow-right"></i> PROJECTS</p>
+                    </li>
+                    <li tabindex="0" role="button" (click)="navigateTo('our-founders')" (keydown.enter)="navigateTo('our-founders')">
+                        <p><i class="pi pi-arrow-right"></i> OUR FOUNDERS</p>
+                    </li>
+                    <li tabindex="0" role="button" (click)="navigateTo('testimonial')" (keydown.enter)="navigateTo('testimonial')">
+                        <p><i class="pi pi-arrow-right"></i> TESTIMONIALS</p>
+                    </li>
+                    <!-- <li tabindex="0" role="button" (click)="navigateTo('our-clients')" (keydown.enter)="navigateTo('our-clients')"><p><i class="pi pi-arrow-right"></i> OUR CLIENTS</p></li> -->
+                    <li tabindex="0" role="button" (click)="navigateTo('contact')" (keydown.enter)="navigateTo('contact')">
+                        <p><i class="pi pi-arrow-right"></i> CONTACT</p>
+                    </li>
                 </ul>
             </div>
         </div>
     </div>
-  <button class="menu-close" (click)="toggleMenu()">×</button>
+    <button class="menu-close" (click)="toggleMenu()">×</button>
 </div>
 
 <button class="menu-toggle" (click)="toggleMenu()">☰</button>
-

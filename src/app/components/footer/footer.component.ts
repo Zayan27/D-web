@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-
+import { ScrollService } from '../../shared/services/scroll.service';
 
 @Component({
   selector: 'app-footer',
@@ -10,13 +10,11 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
-
+  currentYear = new Date().getFullYear();
+  constructor(private scrollService: ScrollService) { }
 
   navigateTo(id: string): void {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+    this.scrollService.scrollTo(id);
   }
 
 }

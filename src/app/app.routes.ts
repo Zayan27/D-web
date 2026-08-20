@@ -1,21 +1,18 @@
 import { Routes } from '@angular/router';
-import { HomeLayoutComponent } from './layouts/home-layout/home-layout.component';
-import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
-import { RefundPolicyComponent } from './components/refund-policy/refund-policy.component';
 
 
 export const routes: Routes = [
     {
         path: '',
-        component: HomeLayoutComponent
+        loadComponent: () => import('./layouts/home-layout/home-layout.component').then(m => m.HomeLayoutComponent)
     },
     {
         path:'privacy-policy',
-        component: PrivacyPolicyComponent
+        loadComponent: () => import('./components/privacy-policy/privacy-policy.component').then(m => m.PrivacyPolicyComponent)
     },
       {
         path:'refund-policy',
-        component: RefundPolicyComponent
+        loadComponent: () => import('./components/refund-policy/refund-policy.component').then(m => m.RefundPolicyComponent)
     },
     {
         path: '**',

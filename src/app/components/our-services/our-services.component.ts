@@ -1,4 +1,4 @@
-import { Component, ViewChildren, ViewChild, QueryList, ElementRef, AfterViewInit } from '@angular/core';
+import { Component, ViewChildren, ViewChild, QueryList, ElementRef, AfterViewInit, OnDestroy } from '@angular/core';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { NgFor } from '@angular/common';
@@ -12,8 +12,9 @@ gsap.registerPlugin(ScrollTrigger);
   templateUrl: './our-services.component.html',
   styleUrl: './our-services.component.scss'
 })
-export class OurServicesComponent implements AfterViewInit {
+export class OurServicesComponent implements AfterViewInit, OnDestroy {
   @ViewChild('sectionHeader', { static: true }) sectionHeader!: ElementRef;
+  private ctx!: gsap.Context;
 
   items = [
     {
@@ -96,10 +97,16 @@ export class OurServicesComponent implements AfterViewInit {
   @ViewChildren('servicesSection', { read: ElementRef }) servicesSection!: QueryList<ElementRef>;
 
   ngAfterViewInit() {
+    this.ctx = gsap.context(() => {
     this.initAnimations();
     this.serviceTexts.changes.subscribe(() => this.initAnimations());
 
     this.setupScrollTrigger();
+    });
+  }
+
+  ngOnDestroy(): void {
+    this.ctx?.revert();
   }
 
   private initAnimations() {

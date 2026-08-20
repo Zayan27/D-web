@@ -11,7 +11,7 @@ $background-color: #520763;
   height: 100vh;
   overflow: hidden;
   z-index: 0;
-  
+
   .background-video {
     position: absolute;
     top: 0;
@@ -21,14 +21,14 @@ $background-color: #520763;
     object-fit: cover;
     z-index: -1;
     border-bottom-left-radius: 45px;
-  border-bottom-right-radius: 45px;
+    border-bottom-right-radius: 45px;
     filter: brightness(0.5);
     will-change: transform;
   }
 }
 
 .mainContainer {
-    margin-top: 190px;
+  margin-top: 190px;
   color: #fff;
   width: 100%;
   height: 100%;
@@ -44,33 +44,33 @@ $background-color: #520763;
   border-radius: 20px;
   display: flex;
   align-items: center;
-  gap: 2px;
-  padding: 2px 16px 2px 16px;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 24px;
   cursor: pointer;
-  transition: background-color 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
-  a {
+  .btn-text {
     color: #111;
     text-decoration: none;
-    transition: color 0.5s ease-in-out;
+    transition: color 0.3s ease;
     font-weight: 600;
   }
 
   .arrow-up {
-    color: #111;  // Default icon color
-    transition: color 0.5s ease-in-out; // Smooth color transition
+    color: #111;
+    transition: color 0.3s ease;
   }
 
   &:hover {
     background: linear-gradient(90deg, rgb(56, 40, 56) 0%, rgba(181, 100, 204, 1) 100%);
-    transform: scale(1.05); // Subtle scale effect
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(181, 100, 204, 0.3);
 
-    a {
-      color: #fff;
-    }
-
+    .btn-text,
     .arrow-up {
-      color: #fff; // Change icon color on hover
+      color: #fff;
     }
   }
 }
@@ -78,52 +78,55 @@ $background-color: #520763;
 
 
 .service-btn {
-  padding: 15px;
-  border: 1px solid #fff;
   height: 50px;
   width: auto;
   border-radius: 20px;
   display: flex;
   align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: transparent;
   cursor: pointer;
-  transition: transform 0.3s ease-in-out, padding 0.3s ease-in-out; // Transition padding and transform
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
-  a {
+  .btn-text {
     color: #fff;
     font-weight: 600;
     text-decoration: none;
-    transition: font-size 0.3s ease-in-out; // Smooth transition for font-size
+    transition: color 0.3s ease;
   }
 
   &:hover {
-    transition: font-size 0.3s ease-in-out;
-    transform: scale(1.05); // Slight scale effect on hover
-    padding: 19px; // Increase padding on hover
-
-    a {
-      font-size: 19px; // Change font size on hover
-    }
+    transform: translateY(-2px);
+    border-color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 15px rgba(255, 255, 255, 0.1);
   }
 }
 
 .mainHeading {
-  
+
   font-family: "Special Gothic Expanded One", sans-serif;
   font-size: 3.5rem;
   font-weight: 600;
   letter-spacing: 0.05em;
-  line-height: 1.1; 
+  line-height: 1.1;
+
   .gradientText {
-  background: linear-gradient(45deg, rgb(201 176 201) 0%, rgba(181, 100, 204, 1) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text; /* For Firefox */
-  color: transparent;    /* Fallback */
-}
-  
+    background: linear-gradient(45deg, rgb(201 176 201) 0%, rgba(181, 100, 204, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    /* For Firefox */
+    color: transparent;
+    /* Fallback */
+  }
+
 
   .mainHeadpart {
     color: #fff !important;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
   }
 
   @media (max-width: 768px) {
@@ -133,6 +136,7 @@ $background-color: #520763;
   @media (max-width: 480px) {
     font-size: 2.2rem;
   }
+
   @media (max-width: 320px) {
     font-size: 2rem;
   }
@@ -140,6 +144,7 @@ $background-color: #520763;
 
 p {
   font-size: 1.2rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 
   @media (max-width: 768px) {
     font-size: 1rem;
@@ -148,51 +153,56 @@ p {
   @media (max-width: 480px) {
     font-size: 0.9rem;
   }
-   @media (max-width: 320px) {
+
+  @media (max-width: 320px) {
     font-size: 0.9rem;
   }
 }
 
-@media (min-width : 2560px){
-  .mainContainer{
+@media (min-width : 2560px) {
+  .mainContainer {
     margin-top: 415px !important;
   }
-  .mainHeading{
+
+  .mainHeading {
     font-size: 5rem;
   }
-  .lead{
+
+  .lead {
     font-size: 1.8rem;
   }
-  .letsConnect-btn{
+
+  .letsConnect-btn {
     font-size: 1.7rem;
     padding: 30px 28px 30px 28px;
 
-    i{
+    i {
       font-size: 1.8rem;
     }
   }
 
-  .service-btn{
+  .service-btn {
     font-size: 1.7rem;
     padding: 30px 28px 30px 28px;
   }
 }
 
 
-@media (max-width: 320px){
-  .bothButtons{
+@media (max-width: 320px) {
+  .bothButtons {
     gap: 1rem !important;
   }
-  .letsConnect-btn{
+
+  .letsConnect-btn {
     font-size: 0.8rem;
     padding: 2px 13px 2px 13px;
 
-    i{
+    i {
       font-size: 0.9rem;
     }
   }
 
-  .service-btn{
+  .service-btn {
     font-size: 0.8rem;
     padding: 2px 13px 2px 13px;
   }

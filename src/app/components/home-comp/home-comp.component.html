@@ -1,10 +1,5 @@
 <div class="video-wrapper" id="home">
-  <video #bgVideo
-  muted
-  loop
-  playsinline
-  preload="auto"
-  class="background-video">
+  <video appAutoplayVideo muted loop playsinline preload="auto" class="background-video">
     <source src="https://res.cloudinary.com/div35uurv/video/upload/v1762709775/vip_2_cspo4c.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
@@ -13,10 +8,10 @@
     <div class="container">
       <div class="row">
         <div class="col-12 px-4">
-            <h1 class="mainHeading">
-                <span class="gradientText">D'</span>
-                <span class="mainHeadpart"> WEB <br class="d-none d-md-block"> SOLUTIONS.</span>
-            </h1>
+          <h1 class="mainHeading">
+            <span class="gradientText">D'</span>
+            <span class="mainHeadpart"> WEB <br class="d-none d-md-block"> SOLUTIONS.</span>
+          </h1>
 
           <p class="lead fw-light mt-3">
             "Code with Purpose, Design with Impact"
@@ -25,21 +20,20 @@
       </div>
     </div>
     <div class="container">
-         <div class="row align-items-center justify-content-center gap-4 bothButtons">
-        
-            <div class="col-md-3" class="letsConnect-btn" (click)="navigateTo('contact')">
-                <a >
-                    Let's Connect
-                    
-                </a>
-                <i class="pi pi-arrow-up-right arrow-up" style="font-size: 1.2rem;"></i>
-            </div>
-            <div class="col-md-3" class="service-btn" (click)="navigateTo('our-services')">
-                <a >
-                    Services
-                </a>
-            </div>
-        
+      <div class="row align-items-center justify-content-center gap-4 bothButtons">
+
+        <button type="button" class="col-md-3 letsConnect-btn border-0" (click)="navigateTo('contact')">
+          <span class="btn-text">
+            Let's Connect
+          </span>
+          <i class="pi pi-arrow-up-right arrow-up" style="font-size: 1.2rem;"></i>
+        </button>
+        <button type="button" class="col-md-3 service-btn" (click)="navigateTo('our-services')">
+          <span class="btn-text">
+            Services
+          </span>
+        </button>
+
       </div>
     </div>
   </div>

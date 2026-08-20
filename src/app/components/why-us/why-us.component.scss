@@ -1,190 +1,193 @@
  $whyus-text-gradient: linear-gradient(90deg, rgb(88, 62, 88) 0%, rgba(181, 100, 204, 1) 100%);
-.mainContainer{
-    padding: 2rem;
-    background-color: #171515;
-    border-radius: 80px 80px 0px 0px;
-}
 
-.line-wrapper {
-  display: block;
-  overflow: hidden;
-}
+ .mainContainer {
+   padding: 2rem;
+   background-color: #171515;
+   border-radius: 80px 80px 0px 0px;
+ }
+
+ .line-wrapper {
+   display: block;
+   overflow: hidden;
+ }
 
 
-h1{
+ h1 {
    font-family: "Special Gothic Expanded One", sans-serif;
-    font-size: 42px;
-    font-weight: 600;
-    color: #FFFF;
-}
-.whyusText{
-    color: #FFFF;
-    font-size: 20px;
+   font-size: 42px;
+   font-weight: 600;
+   color: #FFFF;
+ }
 
-    strong
-    {
-         background:  $whyus-text-gradient;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        color: transparent;
-        font-weight: 600;
-    }
-}
+ .whyusText {
+   color: #FFFF;
+   font-size: clamp(0.6rem, 1vw + 0.4rem, 2.2rem);
 
-.proven-column{
-    background-color: #f5f2f2;
-    padding: 18px;
-    border-radius: 12px;
-    h2{
-        font-weight: 600;
-    }
-}
-.trust-column {
-    padding: 18px;
-  .trust-content {
-    height: 100%; // or min-height: 300px; depending on your layout need
-    display: flex;
-    flex-direction: column;
-    
+   strong {
+     background: $whyus-text-gradient;
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     background-clip: text;
+     color: transparent;
+     font-weight: 600;
+   }
+ }
 
-    h2 {
-      color: #fff;
-      font-weight: 600;
-    }
+ .cardText {
+   font-size: clamp(0.6rem, 1vw + 0.4rem, 1rem);
+ }
 
-    p {
-      color: #fff;
-      margin-bottom: 0; // optional
-    }
-  }
-}
-.scalable-column{
-    background-color: #f5f2f2;
-    padding: 18px;
-    border-radius: 12px;
-    color: #111;
-    h2{
-        font-weight: 600;
-    }
-}
-.support-column{
-    padding: 18px;
-    color: #fff;
-    h2{
-        font-weight: 600;
-    }
-}
+ .proven-column {
+   background-color: #f5f2f2;
+   padding: 18px;
+   border-radius: 12px;
 
-.gsap-column {
-  opacity: 1; // ensures animation is visible
-  transform: translateY(50px);
-  transition: opacity 0.3s, transform 0.3s;
-}
+   h2 {
+     font-weight: 600;
+   }
+ }
 
-@media (min-width: 2560px) {
-  h1{
-    font-size: 5rem;
-  }
-  h2{
-    font-size: 3.4rem;
-  }
-  i{
-     font-size: 3.1rem;
-  }
-  
-  .whyusText{
-    padding: 0;
-    font-size: 2.2rem;
-  }
-  p{
-    font-size: 1.8rem;
-  }
-}
+ .trust-column {
+   padding: 18px;
 
-@media (max-width: 1440px) {
-  
-  i{
-     font-size: 1.8rem;
-  }
-  .whyusText{
-    padding: 0;
-    font-size: 1.3rem;
-  }
-  p{
-    font-size: 1.1rem;
-  }
-}
-@media (max-width: 1024px) {
-  
-  i{
-     font-size: 1.4rem;
-  }
-  .whyusText{
-    padding: 0;
-    font-size: 1.2rem;
-  }
-  p{
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 768px) {
-  h1{
-    font-size: 2rem;
-  }
-  
-  h2{
-    font-size: 1.4rem;
-  }
-  .whyusText{
-    padding: 0;
-    font-size: 1rem;
-  }
-  p{
-    font-size: 0.75rem;
-  }
-}
+   .trust-content {
+     height: 100%; // or min-height: 300px; depending on your layout need
+     display: flex;
+     flex-direction: column;
 
 
-@media (max-width: 425px) {
-  h1{
-    font-size: 2.2rem;
-  }
-  h2{
-    font-size: 2rem;
-  }
-  .whyusText{
-    padding: 0;
-    font-size: 0.9rem;
-  }
-  p{
-    font-size: 0.8rem;
-  }
-}
+     h2 {
+       color: #fff;
+       font-weight: 600;
+     }
 
-@media (max-width: 375px) {
-  h1{
-    font-size: 2rem;
-  }
-  h2{
-    font-size: 1.4rem;
-  }
-  .whyusText{
-    padding: 0;
-    font-size: 0.7rem;
-  }
-  p{
-    font-size: 0.7rem;
-  }
-}
+     p {
+       color: #fff;
+       margin-bottom: 0; // optional
+     }
+   }
+ }
 
-@media (max-width: 320px){
-  h2{
-    font-size: 1.2rem;
-  }
-  .whyusText{
-    padding: 0;
-    font-size: 0.6rem;
-  }
-}
+ .scalable-column {
+   background-color: #f5f2f2;
+   padding: 18px;
+   border-radius: 12px;
+   color: #111;
+
+   h2 {
+     font-weight: 600;
+   }
+ }
+
+ .support-column {
+   padding: 18px;
+   color: #fff;
+
+   h2 {
+     font-weight: 600;
+   }
+ }
+
+ .gsap-column {
+   opacity: 1; // ensures animation is visible
+   transform: translateY(50px);
+   transition: opacity 0.3s, transform 0.3s;
+ }
+
+ @media (min-width: 2560px) {
+   h1 {}
+
+   h2 {
+     font-size: clamp(1.2rem, 1.5vw + 0.8rem, 3.4rem);
+   }
+
+   i {}
+
+   .whyusText {
+     padding: 0;
+     font-size: clamp(0.6rem, 1vw + 0.4rem, 2.2rem);
+   }
+
+   p {}
+ }
+
+ @media (max-width: 1440px) {
+
+   i {}
+
+   .whyusText {
+     padding: 0;
+     font-size: clamp(0.6rem, 1vw + 0.4rem, 2.2rem);
+   }
+
+   p {}
+ }
+
+ @media (max-width: 1024px) {
+
+   i {}
+
+   .whyusText {
+     padding: 0;
+     font-size: clamp(0.6rem, 1vw + 0.4rem, 2.2rem);
+   }
+
+   p {}
+ }
+
+ @media (max-width: 768px) {
+   h1 {}
+
+   h2 {
+     font-size: clamp(1.2rem, 1.5vw + 0.8rem, 3.4rem);
+   }
+
+   .whyusText {
+     padding: 0;
+     font-size: clamp(0.6rem, 1vw + 0.4rem, 2.2rem);
+   }
+
+   p {}
+ }
+
+
+ @media (max-width: 425px) {
+   h1 {}
+
+   h2 {
+     font-size: clamp(1.2rem, 1.5vw + 0.8rem, 3.4rem);
+   }
+
+   .whyusText {
+     padding: 0;
+     font-size: clamp(0.6rem, 1vw + 0.4rem, 2.2rem);
+   }
+
+   p {}
+ }
+
+ @media (max-width: 375px) {
+   h1 {}
+
+   h2 {
+     font-size: clamp(1.2rem, 1.5vw + 0.8rem, 3.4rem);
+   }
+
+   .whyusText {
+     padding: 0;
+     font-size: clamp(0.6rem, 1vw + 0.4rem, 2.2rem);
+   }
+
+   p {}
+ }
+
+ @media (max-width: 320px) {
+   h2 {
+     font-size: clamp(1.2rem, 1.5vw + 0.8rem, 3.4rem);
+   }
+
+   .whyusText {
+     padding: 0;
+     font-size: clamp(0.6rem, 1vw + 0.4rem, 2.2rem);
+   }
+ }

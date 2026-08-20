@@ -91,7 +91,7 @@
 
 
         .left-section h2 {
-            font-size: 42px;
+            font-size: clamp(1.5rem, 3vw + 0.5rem, 5rem);
             font-weight: 600;
             color: white;
             line-height: 1.1;
@@ -99,13 +99,10 @@
             text-transform: uppercase;
 
             @media(max-width: 375px){
-                font-size: 1rem !important;
             }
             @media(max-width: 450px){
-                font-size: 1.2rem !important;
             }
             @media(min-width: 2560px){
-                font-size: 5rem !important;
             }
         }
 
@@ -126,18 +123,15 @@
             margin-bottom: 12px;
             position: relative;
             
-            font-size: 18px;
+            font-size: clamp(0.7rem, 1vw + 0.3rem, 1.4rem);
             display: flex;
             gap: 9px;
             align-items: center;
             @media(max-width: 375px){
-                font-size: .65rem !important;
             }
             @media(max-width: 455px){
-                font-size: .75rem !important;
             }
             @media(min-width: 2560px){
-                font-size: 1.4rem !important;
             }
         }
         .benefits li i{
@@ -167,34 +161,28 @@
         .contact-info a {
             color: white;
             text-decoration: none;
-            font-size: 16px;
+            font-size: clamp(0.7rem, 0.8vw + 0.3rem, 1.2rem);
 
             @media(max-width: 375px){
-                font-size: 0.7rem !important;
             }
             @media(max-width: 455px){
-                font-size: .7rem !important;
             }
             @media(min-width: 2560px){
-                font-size: 1.2rem !important;
             }
         }
 
         .book-call-text {
             color: rgba(255, 255, 255, 0.8);
-            font-size: 14px;
+            font-size: clamp(0.85rem, 0.6vw + 0.5rem, 1.4rem);
             margin-bottom: 0px;
             padding:15px 0 15px 0px ;
             @media(max-width: 375px){
-                font-size: 0.85rem !important;
                 padding:10px 0 10px 0px !important;
             }
             @media(max-width: 455px){
-                font-size: .85rem !important;
                 padding:10px 0 10px 0px !important;
             }
             @media(min-width: 2560px){
-                font-size: 1.4rem !important;
             }
         }
 
@@ -233,17 +221,14 @@
 
         .service-selection h3 {
             color: white;
-            font-size: 16px;
+            font-size: clamp(0.85rem, 0.8vw + 0.5rem, 1.3rem);
             margin-bottom: 12px;
             font-weight: 600;
             @media(max-width: 375px){
-                font-size: 0.85rem !important;
             }
             @media(max-width: 450px){
-                font-size: 0.9rem !important;
             }
             @media(min-width: 2560px){
-                font-size: 1.3rem !important;
             }
         }
 
@@ -258,18 +243,15 @@
             color: white;
             padding: 8px 16px;
             border-radius: 20px;
-            font-size: 14px;
+            font-size: clamp(0.6rem, 0.7vw + 0.3rem, 1.1rem);
             border: 1px solid rgba(255, 255, 255, 0.2);
             cursor: pointer;
             transition: all 0.3s ease;
             @media(max-width: 375px){
-                font-size: 0.5rem !important;
             }
             @media(max-width: 450px){
-                font-size: 0.6rem !important;
             }
             @media(min-width: 2560px){
-                font-size: 1.1rem !important;
             }
         }
 
@@ -285,17 +267,14 @@
 
         .budget-selection h3 {
             color: white;
-            font-size: 16px;
+            font-size: clamp(0.85rem, 0.8vw + 0.5rem, 1.3rem);
             margin-bottom: 12px;
             font-weight: 600;
             @media(max-width: 375px){
-                font-size: 0.85rem !important;
             }
             @media(max-width: 450px){
-                font-size: 0.9rem !important;
             }
             @media(min-width: 2560px){
-                font-size: 1.3rem !important;
             }
         }
 
@@ -310,18 +289,15 @@
             color: white;
             padding: 8px 16px;
             border-radius: 20px;
-            font-size: 14px;
+            font-size: clamp(0.6rem, 0.7vw + 0.3rem, 1.1rem);
             border: 1px solid rgba(255, 255, 255, 0.2);
             cursor: pointer;
             transition: all 0.3s ease;
             @media(max-width: 375px){
-                font-size: 0.5rem !important;
             }
             @media(max-width: 450px){
-                font-size: 0.6rem !important;
             }
             @media(min-width: 2560px){
-                font-size: 1.1rem !important;
             }
         }
 
@@ -344,17 +320,14 @@
 
         .form-group label {
             color: white;
-            font-size: 14px;
+            font-size: clamp(0.65rem, 0.7vw + 0.3rem, 1.2rem);
             margin-bottom: 8px;
             display: block;
             @media(max-width: 375px){
-                font-size: 0.65rem !important;
             }
             @media(max-width: 450px){
-                font-size: 0.7rem !important;
             }
             @media(min-width: 2560px){
-                font-size: 1.2rem !important;
             }
         }
 
@@ -369,13 +342,10 @@
             font-size: 14px;
             transition: all 0.3s ease;
             @media(max-width: 375px){
-                font-size: 0.65rem !important;
             }
             @media(max-width: 450px){
-                font-size: 0.7rem !important;
             }
             @media(min-width: 2560px){
-                font-size: 1.2rem !important;
             }
         }
 
@@ -403,12 +373,11 @@
             padding: 24px;
             text-align: center;
             color: rgba(255, 255, 255, 0.7);
-            font-size: 14px;
+            font-size: clamp(0.875rem, 0.8vw + 0.4rem, 1.3rem);
             margin-bottom: 24px;
             cursor: pointer;
             transition: all 0.3s ease;
             @media(min-width: 2560px){
-                font-size: 1.3rem !important;
             }
         }
 
@@ -423,13 +392,12 @@
             border: none;
             padding: 16px 32px;
             border-radius: 12px;
-            font-size: 16px;
+            font-size: clamp(1rem, 1vw + 0.5rem, 1.4rem);
             font-weight: 600;
             cursor: pointer;
             width: 100%;
             transition: all 0.3s ease;
              @media(min-width: 2560px){
-                font-size: 1.4rem !important;
             }
         }
 
@@ -449,7 +417,7 @@
             }
             
             .left-section h2 {
-                font-size: 36px;
+                font-size: clamp(1.5rem, 3vw + 0.5rem, 5rem);
             }
             
             .form-row {

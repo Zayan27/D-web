@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { TextPlugin } from 'gsap/TextPlugin';
@@ -10,18 +10,31 @@ import { TextPlugin } from 'gsap/TextPlugin';
   templateUrl: './comingsoon.component.html',
   styleUrl: './comingsoon.component.scss'
 })
-export class ComingsoonComponent {
-days: number = 0;
+export class ComingsoonComponent implements OnInit, OnDestroy {
+  days: number = 0;
   hours: number = 0;
   minutes: number = 0;
   seconds: number = 0;
   targetDate: Date = new Date('2025-08-11T00:00:00');
+  private ctx!: gsap.Context;
+  private intervalId: any;
 
   ngOnInit(): void {
     gsap.registerPlugin(ScrollTrigger, TextPlugin);
-    this.initAnimations();
-    this.startCountdown();
-    setInterval(() => this.startCountdown(), 1000);
+    this.ctx = gsap.context(() => {
+      this.initAnimations();
+      this.startCountdown();
+    });
+    this.intervalId = setInterval(() => {
+      this.ctx.add(() => this.startCountdown());
+    }, 1000);
+  }
+
+  ngOnDestroy(): void {
+    if (this.intervalId) {
+      clearInterval(this.intervalId);
+    }
+    this.ctx?.revert();
   }
 
   initAnimations(): void {
@@ -122,6 +135,7 @@ days: number = 0;
     const emailInput = (event.target as HTMLFormElement).elements.namedItem('email') as HTMLInputElement;
     
     if (emailInput.value) {
+      this.ctx.add(() => {
       gsap.to('.subscribe-form', {
         duration: 0.5,
         y: -10,
@@ -140,9 +154,11 @@ days: number = 0;
           }, 3000);
         }
       });
+      });
       
       emailInput.value = '';
     } else {
+      this.ctx.add(() => {
       gsap.to('.subscribe-form', {
         keyframes: [
           { x: -5 },
@@ -153,6 +169,7 @@ days: number = 0;
         ],
         duration: 0.5,
         ease: 'power1.inOut'
+      });
       });
 
     }

@@ -1,86 +1,93 @@
 <div class="container-fluid footerSec py-4 mt-5">
   <div class="row text-md-start justify-content-evenly mt-3">
-    <div class="col-12 col-md-3 mb-3 mb-md-0"> 
-        <h1 class="mainHeading">
-                <span class="gradientText">D'</span>
-                <span class="mainHeadpart"> WEB <br class="d-none d-md-block"> SOLUTIONS.</span>
-        </h1>
+    <div class="col-12 col-md-3 mb-3 mb-md-0">
+      <h1 class="mainHeading">
+        <span class="gradientText">D'</span>
+        <span class="mainHeadpart"> WEB <br class="d-none d-md-block"> SOLUTIONS.</span>
+      </h1>
 
-        <ul class="list-unstyled social-links m-0">
-            <li class="d-flex gap-2 align-items-center">
-                 <a href="mailto:contact@dwebsolutions.org?subject=Project Inquiry from Website"><i class="pi pi-at"></i>dwebsolution0&#64;gmail.com</a>
-            </li>
-            <li class="d-flex gap-2 align-items-center">
-                <a href="https://www.facebook.com/dwebsolutions/" target="_blank"><i class="pi pi-facebook"></i>Facebook</a>
-            </li>
-            <li class="d-flex gap-2 align-items-center">
-                <a href="https://www.instagram.com/d_web_solutions/" target="_blank"><i class="pi pi-instagram"></i> Instagram</a>
-            </li>
-            <li class="d-flex gap-2 align-items-center">
-                <a href="https://wa.me/+923360069977" class="m-0" target="_blank"><i class="pi pi-whatsapp"></i>+92 336 0069977</a>
-            </li>
-            
-        </ul>
+      <ul class="list-unstyled social-links m-0">
+        <li class="d-flex gap-2 align-items-center">
+          <a href="mailto:contact@dwebsolutions.org?subject=Project Inquiry from Website"><i
+              class="pi pi-at"></i>dwebsolution0&#64;gmail.com</a>
+        </li>
+        <li class="d-flex gap-2 align-items-center">
+          <a href="https://www.facebook.com/dwebsolutions/" target="_blank"><i class="pi pi-facebook"></i>Facebook</a>
+        </li>
+        <li class="d-flex gap-2 align-items-center">
+          <a href="https://www.instagram.com/d_web_solutions/" target="_blank"><i class="pi pi-instagram"></i>
+            Instagram</a>
+        </li>
+        <li class="d-flex gap-2 align-items-center">
+          <a href="https://wa.me/+923360069977" class="m-0" target="_blank"><i class="pi pi-whatsapp"></i>+92 336
+            0069977</a>
+        </li>
+
+      </ul>
     </div>
 
     <div class="col-12 col-md-3 mb-3 mb-md-0 d-flex flex-column justify-content-between">
-        <h5>
-            Quick Access
-        </h5>
+      <h5>
+        Quick Access
+      </h5>
       <ul class="list-unstyled quickAccessList m-0">
-        <li (click)="navigateTo('home')"><p>Home</p>
+        <li tabindex="0" role="button" (click)="navigateTo('home')" (keydown.enter)="navigateTo('home')">
+          <p>Home</p>
         </li>
-        <li (click)="navigateTo('why-us')">
-            <p>Why Us?</p>
+        <li tabindex="0" role="button" (click)="navigateTo('why-us')" (keydown.enter)="navigateTo('why-us')">
+          <p>Why Us?</p>
         </li>
-        <li (click)="navigateTo('our-services')">
-            <p>Our Services</p>
+        <li tabindex="0" role="button" (click)="navigateTo('our-services')"
+          (keydown.enter)="navigateTo('our-services')">
+          <p>Our Services</p>
         </li>
-        <li (click)="navigateTo('projects')">
-            <p>Projects</p>
+        <li tabindex="0" role="button" (click)="navigateTo('projects')" (keydown.enter)="navigateTo('projects')">
+          <p>Our Projects</p>
         </li>
-        <li (click)="navigateTo('testimonial')">
-            <p>Testimonials</p>
+        <li tabindex="0" role="button" (click)="navigateTo('testimonial')" (keydown.enter)="navigateTo('testimonial')">
+          <p>Testimonials</p>
         </li>
-        <li (click)="navigateTo('our-founders')">
-            <p>Our Team</p>
+        <li tabindex="0" role="button" (click)="navigateTo('our-founders')"
+          (keydown.enter)="navigateTo('our-founders')">
+          <p>Founders</p>
         </li>
-        <li (click)="navigateTo('contact')">
-            <p>Contact Us</p>
+        <li tabindex="0" role="button" (click)="navigateTo('contact')" (keydown.enter)="navigateTo('contact')">
+          <p>Contact Us</p>
         </li>
       </ul>
     </div>
 
     <div class="col-12 col-md-3 mb-3 mb-md-0 d-flex flex-column justify-content-between gap-3">
-            <div>
-                <h5>
-                    Subscribe
-                </h5>
-                <p class="newsText">subscribe to our news letter.</p>
+      <div>
+        <h5>
+          Subscribe
+        </h5>
+        <p class="newsText">subscribe to our news letter.</p>
 
-                <div class="d-flex align-items-center gap-3 mt-4 sendmailWrapper">
-                    <label class="custom-field">
-                        <input type="email" placeholder=" " />
-                        <span class="placeholder">youremailaddress&#64;gmail.com</span>
-                    </label>
-                    <button class="newsLetterSend">
-                        <a href="" class="m-0">Send</a>
-                    </button>
-                    
-                </div>
-            </div>
-            <div>
-                <button class="letsTalk-btn">
-                    <a class="m-0 d-flex align-items-center gap-2" (click)="navigateTo('contact')">Let's Connect <i class="pi pi-arrow-up-right"></i></a>
-                </button>
+        <div class="d-flex align-items-center gap-3 mt-4 sendmailWrapper">
+          <label class="custom-field">
+            <input type="email" placeholder=" " />
+            <span class="placeholder">youremailaddress&#64;gmail.com</span>
+          </label>
+          <button class="newsLetterSend">
+            <a href="" class="m-0">Send</a>
+          </button>
 
-            </div>
+        </div>
+      </div>
+      <div>
+        <button class="letsTalk-btn">
+          <a class="m-0 d-flex align-items-center gap-2" tabindex="0" role="button" (click)="navigateTo('contact')"
+            (keydown.enter)="navigateTo('contact')">Let's Connect <i class="pi pi-arrow-up-right"></i></a>
+        </button>
+
+      </div>
     </div>
-     </div>
+  </div>
 
   <div class="row mt-4">
     <div class="col-12 text-center small privacyText">
-      © 2025 D'Web Soulutions | <a routerLink="/privacy-policy" target="_blank">Privacy Policy</a>
+      © {{ currentYear }} D'Web Soulutions | <a routerLink="/privacy-policy" target="_blank">Privacy Policy</a>
     </div>
   </div>
 </div>

@@ -25,14 +25,11 @@
   }
 
   @media (max-width: 768px) {
-    font-size: 3rem;
   }
 
   @media (max-width: 480px) {
-    font-size: 2.2rem;
   }
   @media (max-width: 320px) {
-    font-size: 2rem;
   }
 }
 .hero-section {
@@ -68,7 +65,7 @@
     }
 
     .hero-title {
-      font-size: 2.5rem !important;
+      font-size: clamp(2rem, 5vw + 1rem, 3.5rem);
       font-weight: 800;
       margin-bottom: 1rem;
       background: linear-gradient(45deg, rgb(201 176 201) 0%, rgba(181, 100, 204, 1) 100%);
@@ -77,22 +74,18 @@
       background-clip: text;
       animation: glow 3s ease-in-out infinite;
       @media(max-width: 375px){
-        font-size: 1.4rem !important;
       }
       @media(max-width: 480px){
-        font-size: 1.8rem !important;
       }
     }
 
     .hero-subtitle {
-      font-size: 1.1rem !important;
+      font-size: clamp(1rem, 1.5vw + 0.5rem, 1.5rem);
       color: #b0b0b0;
       margin-bottom: 1rem;
        @media(max-width: 375px){
-        font-size: .9rem !important;
       }
       @media(min-width: 425px){
-        font-size: 1.2rem !important;
       }
     }
 
@@ -100,10 +93,8 @@
       color: #888;
       font-size: 0.9rem;
       @media(max-width: 375px){
-        font-size: .7rem !important;
       }
       @media(min-width: 425px){
-        font-size: 1rem !important;
       }
     }
   }
@@ -177,7 +168,7 @@
     text-align: center;
     color: #fff;
     margin-bottom: 2rem;
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 2vw + 0.8rem, 1.8rem);
   }
 
   .toc-grid {
@@ -197,18 +188,15 @@
     align-items: center;
     gap: 0.75rem;
     color: #e0e0e0;
-    font-size: 0.95rem;
+    font-size: clamp(0.9rem, 1vw + 0.5rem, 1.1rem);
     @media(max-width: 375px){
-      font-size: .8rem !important;
     }
 
     .toc-icon {
       font-size: 1.3rem;
       @media(max-width: 375px){
-        font-size: .9rem !important;
       }
       @media(min-width: 425px){
-        font-size: 1.1rem !important;
       }
     }
 
@@ -237,7 +225,6 @@
     font-size: 1.1rem;
     line-height: 1.8;
     @media(max-width: 375px){
-      font-size: .9rem !important;
     }
   }
 
@@ -270,23 +257,19 @@
       .section-icon {
         font-size: 2.2rem;
         @media(max-width: 375px){
-          font-size: 1.4rem;
         }
         @media(min-width: 375px){
-          font-size: 1.3rem !important;
         }
       }
 
       h2 {
-        font-size: 1.8rem;
+        font-size: clamp(1.5rem, 3vw + 1rem, 2.5rem);
         color: #fff;
         margin: 0;
 
         @media(max-width: 375px){
-          font-size: 1.2rem !important;
         }
         @media(min-width: 375px){
-          font-size: 1.4rem !important;
         }
       }
     }
@@ -296,7 +279,7 @@
         margin-bottom: 1rem;
         line-height: 1.8;
         color: #c0c0c0;
-        font-size: 1.05rem;
+        font-size: clamp(0.95rem, 1vw + 0.5rem, 1.15rem);
         padding-left: 1rem;
         border-left: 2px solid rgba(102, 126, 234, 0.3);
 
@@ -305,10 +288,8 @@
         }
 
         @media(max-width: 375px){
-          font-size: .9rem !important;
         }
         @media(min-width: 375px){
-          font-size: 1.1rem !important;
         }
       }
     }
@@ -341,16 +322,15 @@
       h2 {
         color: #fff;
         margin-bottom: 1rem;
-        font-size: 2rem;
+        font-size: clamp(1.5rem, 3vw + 1rem, 2.5rem);
         @media(max-width:375px){
-          font-size: 1.4rem !important;
         }
       }
 
       p {
         color: #c0c0c0;
         margin-bottom: 2rem;
-        font-size: 1.1rem;
+        font-size: clamp(0.9rem, 1vw + 0.5rem, 1.1rem);
       }
 
       .contact-info {
@@ -363,7 +343,7 @@
           display: flex;
           align-items: center;
           gap: 0.75rem;
-          font-size: 1.1rem;
+          font-size: clamp(0.9rem, 1vw + 0.5rem, 1.1rem);
           color: #e0e0e0;
           flex-wrap: wrap;
           justify-content: center;
@@ -396,7 +376,7 @@
 
   p{
     @media(max-width: 375px){
-      font-size: .85rem !important;
+      font-size: clamp(0.9rem, 1vw + 0.5rem, 1.1rem);
     }
   }
 }
@@ -413,17 +393,14 @@
   }
 
   .content-heading{
-    font-size: 1.2rem;
+    font-size: clamp(1.4rem, 2vw + 1rem, 2rem);
     
   }
   .contact-user{
-    font-size: 0.8rem;
   }
   .contact-icon{
-    font-size: 0.74rem !important;
   }
   .phNo{
-    font-size: 0.8rem;
   }
 }
 
@@ -465,4 +442,4 @@
 
 
 
-
+

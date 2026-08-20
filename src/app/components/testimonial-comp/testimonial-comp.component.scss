@@ -1,66 +1,60 @@
-
-
-*{
-    margin: 0;
+* {
+  margin: 0;
 }
-p{
+
+p {
   font-size: 1rem;
-  @media(max-width: 1300px){
-    font-size: 0.85rem;
-  }
-  @media(max-width: 390px){
-    font-size: 0.7rem;
-  }
-  @media(min-width: 2560px){
-    font-size: 1.1rem;
-  }
-}
-h5{
-  font-size: 0.9rem;
-  @media(min-width: 2560px){
-    font-size: 1.2rem;
-  }
-}
-.testimonial-container{
-    color: #Fff;
-    .sectionHeading{
-        font-size: 42px;
-        font-weight: 600;
-        @media(max-width: 375px){
-          font-size: 2rem;
-        }
-        @media(min-width: 2560px){
-          font-size: 5rem;
-        }
-    }
-    .sectionText{
-        color: #c1c1c1;
-        font-size: 20px;
-        @media(max-width: 375px){
-          font-size: 0.9rem;
-        }
-        @media(min-width: 2560px){
-          font-size: 2rem;
-        }
-    }
+
+  @media(max-width: 1300px) {}
+
+  @media(max-width: 390px) {}
+
+  @media(min-width: 2560px) {}
 }
 
-.testi-text{
-    border-radius: 20px;
-    padding: 4px 16px 5px 16px;
-    background: rgb(202, 248, 189);
-    font-size: 22px;
-    color: #111;
-    font-weight: 800;
-    text-align: center;
-    box-shadow: 2px 2px 2px rgb(160, 208, 147);
-     @media(max-width: 375px){
-          font-size: 1rem;
-        }
-        @media(min-width: 2560px){
-          font-size: 2.1rem;
-        }
+h5 {
+  font-size: 0.9rem;
+
+  @media(min-width: 2560px) {}
 }
+
+.testimonial-container {
+  color: #Fff;
+
+  .sectionHeading {
+    font-size: clamp(2rem, 3vw + 1.2rem, 5rem);
+    font-weight: 600;
+
+    @media(max-width: 375px) {}
+
+    @media(min-width: 2560px) {}
+  }
+
+  .sectionText {
+    color: #c1c1c1;
+    font-size: clamp(0.9rem, 1vw + 0.5rem, 2rem);
+
+    @media(max-width: 375px) {}
+
+    @media(min-width: 2560px) {}
+  }
+}
+
+.testi-text {
+  border-radius: 20px;
+  padding: 4px 16px 5px 16px;
+  background: rgb(202, 248, 189);
+  font-size: clamp(1rem, 1.2vw + 0.6rem, 2.1rem);
+  color: #111;
+  font-weight: 800;
+  text-align: center;
+  box-shadow: 2px 2px 2px rgb(160, 208, 147);
+
+  @media(max-width: 375px) {}
+
+  @media(min-width: 2560px) {}
+}
+
 .fancy {
   position: relative;
   white-space: nowrap;
@@ -91,7 +85,8 @@ h5{
 
 .marquee-track {
   display: flex;
-  align-items: stretch; /* ensures equal height across cards */
+  align-items: stretch;
+  /* ensures equal height across cards */
   gap: 20px;
   width: max-content;
 }
@@ -103,60 +98,68 @@ h5{
   min-width: 400px;
   max-width: 400px;
   display: flex;
-  flex-direction: column; /* make it vertical layout */
-  justify-content: space-between; /* ensures content fits evenly */
+  flex-direction: column;
+  /* make it vertical layout */
+  justify-content: space-between;
+  /* ensures content fits evenly */
   background: #111;
   color: #fff;
   padding: 20px;
   border-radius: 18px;
   flex-shrink: 0;
   transition: transform 0.3s ease;
-  height: 100%; /* allow equal height when parent enforces it */
+  height: 100%;
+  /* allow equal height when parent enforces it */
 }
 
+.reviewCards p {
+  font-size: clamp(0.7rem, 0.8vw + 0.4rem, 1rem);
+}
 
 .reviewCards:hover {
-    transform: translateY(-5px); /* Optional: adds hover effect */
+  transform: translateY(-5px);
+  /* Optional: adds hover effect */
 }
 
 .clientProfile {
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-    border: 1px solid #000;
-    overflow: hidden; /* Ensures image stays within bounds */
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  overflow: hidden;
+  /* Ensures image stays within bounds */
 }
 
 .clientProfile img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .namePart .line {
-    height: auto;
-    width: 2px; /* Slightly more visible */
-    background: #c1c1c1;
+  height: auto;
+  width: 2px;
+  /* Slightly more visible */
+  background: #c1c1c1;
 }
 
 .ClientName h5 {
-    background: linear-gradient(90deg, rgb(219, 194, 239) 0%, rgba(133, 67, 159) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
-    
-    @media(min-width: 2560px){
-      font-size: 1.2rem;
-    }
+  background: linear-gradient(90deg, rgb(219, 194, 239) 0%, rgba(133, 67, 159) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+
+  @media(min-width: 2560px) {
+    font-size: clamp(0.85rem, 0.8vw + 0.5rem, 1.2rem);
+  }
 }
 
 .positon {
-    color: #c1c1c1;
-    font-size: 14px;
-    @media(min-width: 2560px){
-      font-size: 1rem;
-    }
+  color: #c1c1c1;
+  font-size: clamp(0.75rem, 0.8vw + 0.4rem, 1rem);
+
+  @media(min-width: 2560px) {}
 }
 
 @media (max-width: 768px) {
@@ -173,7 +176,3 @@ h5{
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
- 
-
-
-

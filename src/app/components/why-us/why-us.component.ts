@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild, OnDestroy } from '@angular/core';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import SplitText from 'gsap/SplitText';
@@ -12,8 +12,9 @@ gsap.registerPlugin(ScrollTrigger, SplitText);
   templateUrl: './why-us.component.html',
   styleUrls: ['./why-us.component.scss']
 })
-export class WhyUsComponent implements AfterViewInit {
+export class WhyUsComponent implements AfterViewInit, OnDestroy {
   @ViewChild('whyUsSection') sectionRef!: ElementRef;
+  private ctx!: gsap.Context;
 
   ngAfterViewInit(): void {
   const section = this.sectionRef.nativeElement;
@@ -24,6 +25,7 @@ export class WhyUsComponent implements AfterViewInit {
 
   // Delay to ensure layout is ready
   requestAnimationFrame(() => {
+    this.ctx = gsap.context(() => {
     const split = new SplitText(textEl, {
       type: 'lines',
       linesClass: 'line-wrapper'
@@ -85,8 +87,11 @@ columns.forEach((column: HTMLElement, index: number) => {
 
     // Refresh ScrollTrigger after DOM is painted
     ScrollTrigger.refresh();
-    
+    });
   });
 }
 
+  ngOnDestroy(): void {
+    this.ctx?.revert();
+  }
 }

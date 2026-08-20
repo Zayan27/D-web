@@ -12,24 +12,11 @@ $strong-text-gradient: linear-gradient(90deg, rgba(217, 35, 208, 1) 0%, rgba(242
 
   .starImg {
     position: absolute;
-    width: 80px;
-    height: 80px;
-    
+    width: clamp(50px, 8vw, 100px);
+    aspect-ratio: 1;
     z-index: 0;
 
-    @media (max-width: 768px) {
-      width: 70px !important;
-      height: 70px !important;
-    }
-
-    @media (max-width: 375px) {
-      width: 50px !important;
-      height: 50px !important;
-    }
-
     &.starLeft {
-         width: 100px;
-    height: 100px;
       top: 5%;
       left: 20%;
       transform: translate(-30%, -30%);
@@ -41,33 +28,15 @@ $strong-text-gradient: linear-gradient(90deg, rgba(217, 35, 208, 1) 0%, rgba(242
 
     &.starRight {
       bottom: 20%;
-      right: 35%;
+      right: clamp(10%, 25vw, 35%);
       transform: translate(30%, 30%);
-      @media (min-width:2560px){
-        right: 35% !important;
-      }
-      @media (max-width:1024px){
-        right: 28% !important;
-      }
-      @media (min-width:768px){
-        bottom: 12% !important;
-      }
-      @media (max-width:425px){
-        bottom: 12% !important;
-      }
-      @media (max-width:320px){
-        right: 30% !important;
-      }
-      
     }
-      
-
   }
 }
 
 .whoWeAreHeading {
   position: relative;
-  font-size: 1.4rem;
+  font-size: clamp(0.8rem, 1vw + 0.6rem, 1.8rem);
   font-weight: 400;
   line-height: 1.4;
   letter-spacing: 0.07rem;
@@ -82,17 +51,13 @@ $strong-text-gradient: linear-gradient(90deg, rgba(217, 35, 208, 1) 0%, rgba(242
     font-weight: 600;
   }
   @media (min-width: 2560px) {
-    font-size: 1.8rem;
   }
 
   @media (max-width: 768px) {
-    font-size: 1.2rem;
   }
 
   @media (max-width: 480px) {
-    font-size: 0.9rem;
   }
    @media (max-width: 375px) {
-    font-size: 0.8rem;
   }
-}
+}
